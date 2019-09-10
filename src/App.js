@@ -9,7 +9,7 @@ import History from './pages/History';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Wrapper from './components/Wrapper';
+// import Wrapper from './components/Wrapper';
 
 function App() {
   return (
@@ -17,12 +17,12 @@ function App() {
       <div>
         <Header />
         <Nav />
-          <Wrapper>
+          {/* <Wrapper> */}
             <Route exact path="/" component={Home} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/fosters" component={Fosters} />
             <Route exact path="/history" component={History} />
-          </Wrapper>
+          {/* </Wrapper> */}
         <Footer />
       </div>
     </Router>
