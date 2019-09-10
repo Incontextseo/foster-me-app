@@ -1,35 +1,39 @@
 {
   "name": "foster-me-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "gh-pages": "^2.1.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
-  },
-  "homepage": "https://incontextseo.github.io/foster-me-app/",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incontextseo/foster-me-app.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Incontextseo/foster-me-app/issues"
+  },
+  "homepage": "https://github.com/Incontextseo/foster-me-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "dotenv": "^8.1.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   }
 }
