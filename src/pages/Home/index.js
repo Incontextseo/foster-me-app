@@ -1,1 +1,1 @@
-export { default } from "./GamePiece";
+export { default } from "./Home";

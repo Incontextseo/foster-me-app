@@ -1,17 +1,16 @@
 import React from 'react'
 // import { Col, CardPanel } from 'react-materialize';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './Home.css'
-import Login from '../../components/Login';
+import './Fosters.css'
+import Animals from '../../components/Animals';
 
-
-function Home() {
+function Fosters() {
   return (
     <div>
-        Hello World! - Welcome to Foster Me!
-        <Login />
+        Hello World! - View Your Current Fosters!
+        <Animals />
     </div>
   );
 }
 
-export default Home
+export default Fosters
