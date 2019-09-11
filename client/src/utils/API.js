@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 export default {
+    //get animals from the API
     getAnimals: (searchZip, animalType) => {
 
         const headers = {
@@ -71,5 +72,16 @@ export default {
             })
             .catch(err => console.log(err));
 
-    }
+    },
+    // Get specific animal by ID
+    getAnimal: animalID => {
+        return axios.get("/api/animals/" + animalID);
+    },
+    // Save a foster to the database
+    saveAnimal: animalData => {
+        return axios.post("/api/animals", animalData);
+    },
+
+
+
 };
