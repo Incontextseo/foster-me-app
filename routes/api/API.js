@@ -22,7 +22,7 @@ module.exports = function(app) {
             res.json(dbAnimal);
         });
     });
-
+    
     // GET route for past fosters
     app.get("api/animals/past", function(req, res) {
         db.Animal.findAll({

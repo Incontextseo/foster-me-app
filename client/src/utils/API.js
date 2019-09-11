@@ -6,7 +6,11 @@ export default {
         const headers = {
             "Content-Type": "application/json",
           };
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 17ae6100e832c4d8fc07ccc33ca3736c2d1cd7fe
         const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
 
         // get search variables from form. Replace hardcoded values when form is built
@@ -14,7 +18,11 @@ export default {
         console.log("zip code: ", searchZip);
         animalType = {animalType};
         console.log("animal type: ", animalType);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 17ae6100e832c4d8fc07ccc33ca3736c2d1cd7fe
         // json data to post to RescueGroups api to get animal results
         const data = {
             "apikey": REACT_APP_APIKEY,
@@ -72,4 +80,8 @@ export default {
             .catch(err => console.log(err));
 
     }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 17ae6100e832c4d8fc07ccc33ca3736c2d1cd7fe
