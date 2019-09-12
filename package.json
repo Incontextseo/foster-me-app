@@ -1,8 +1,21 @@
 {
   "name": "foster-me-app",
+<<<<<<< HEAD
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+=======
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^2.1.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1"
+  },
+  "homepage": "https://incontextseo.github.io/foster-me-app/",
+>>>>>>> master
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
