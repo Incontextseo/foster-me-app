@@ -8,7 +8,7 @@ class Animals extends Component {
     render() {
         return (
             <div>
-                This is the list of Animals!
+                This is the Animals component!
             </div>
         )
     }
