@@ -17,9 +17,13 @@ function App() {
         <Header />
         <Nav />
             <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/fosters" component={Fosters} />
+            <Route exact path="/api/animals/" component={Fosters} />
+            <Route exact path="/api/animals/current/" component={Fosters} />
             <Route exact path="/history" component={History} />
+            <Route exact path="/api/animals/past" component={History} />
         <Footer />
       </div>
     </Router>

@@ -4,6 +4,7 @@ import React from 'react'
 import './Search.css'
 import Filter from '../../components/Filter';
 import Animals from '../../components/Animals';
+import API from '../../utils/API';
 
 class Search extends React.Component {
   state = {
@@ -26,7 +27,8 @@ class Search extends React.Component {
     API.getAnimals(this.state.searchZip, this.state.animalType)
     .then( results => {
 
-      // RescueGroups.org API returns results as object instead of array so loop through results & push to array so map function works
+      // RescueGroups.org API returns results as object instead of array 
+      //so loop through results & push to array so map function works
       let details = [];
 
       for (var i in results.data) {
@@ -37,6 +39,26 @@ class Search extends React.Component {
       console.log({ animals: details });
     })
     .catch(err => console.log(err));
+  };
+
+  saveAnimal = animalID => {
+    console.log("Save animal button clicked")
+    const animal = this.state.animals.find(animal => animal.animalID === animalID);
+    API.saveAnimal({
+      animalID: animal.value.animalID,
+      animalName: animal.value.animalName,
+      animalGeneralAge: animal.value.animalGeneralAge,
+      animalGeneralSizePotential: animal.value.animalGeneralSizePotential,
+      animalDescriptionPlain: animal.value.animalDescriptionPlain,
+      animalThumbnailUrl: animal.value.animalThumbnailUrl,
+      animalHouseTrained: animal.value.animalHouseTrained,
+      animalDeclawed: animal.value.animalDeclawed,
+      fosterStatus: "current"
+    }).then(() => {
+      this.setState({
+        animals: this.state.animals.filter(animal => animal.animalID !== animalID)
+      });
+    }).catch(err => console.log(err));
   };
 
   render() {
@@ -59,7 +81,10 @@ class Search extends React.Component {
               animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
               animalDescriptionPlain={animal.value.animalDescriptionPlain}
               animalThumbnailUrl={animal.value.animalThumbnailUrl}
-            //   onClick={() => this.saveAnimal(animal.animalID)}
+              onClick={() => {
+                console.log("clicked?");
+                this.saveAnimal(animal.value.animalID)
+              }}
               buttonText="Foster me"
             />
 

@@ -79,8 +79,18 @@ export default {
     },
     // Save a foster to the database
     saveAnimal: animalData => {
-        return axios.post("/api/animals", animalData);
+        console.log("data to save: ", animalData);
+        return axios.post("/api/animals/", animalData);
     },
+    // Get current fosters from database
+    getCurrentFosters: () => {
+        return axios.get("/api/animals/current/");
+    },
+    // Get past fosters from database
+    getPastFosters: () => {
+        return axios.get("/api/animals/past/");
+    },
+    // Post route to update foster info in database
 
 
 

@@ -9,7 +9,7 @@ class Nav extends Component {
         return (
             <nav className="pinned">
                 <div>
-                    <ul className="nav justify-content-center">
+                    <ul className="nav navList justify-content-center">
                         <li className="nav-item">
                             <a className="nav-link" href="/">Home</a>
                         </li>
