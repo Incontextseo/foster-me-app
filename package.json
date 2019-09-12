@@ -1,10 +1,8 @@
 {
   "name": "foster-me-app",
-<<<<<<< HEAD
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-=======
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +13,6 @@
     "react-scripts": "3.1.1"
   },
   "homepage": "https://incontextseo.github.io/foster-me-app/",
->>>>>>> master
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
