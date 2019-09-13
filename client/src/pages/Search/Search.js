@@ -6,20 +6,18 @@ import Filter from '../../components/Filter';
 import Animals from '../../components/Animals';
 import API from '../../utils/API';
 
-class Search extends React.Component {
-  state = {
-    animals: [],
-    searchZip: "",
-    animalType: "",
-  };
 
-  handleInputChange = event => {
-    this.setState({searchZip: event.target.value});
-  };
+function Search() {
+  return (
+    <div>
+        Hello World! - Search Available Fosters!
+        <Filter />
+        <Animals />
+    </div>
+  );
+}
 
-  handleSelectionChange = event => {
-    this.setState({animalType: event.target.value});
-  };
+export default Search
 
   handleFormSubmit = event => {
     event.preventDefault();
