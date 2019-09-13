@@ -55,11 +55,11 @@ module.exports = function(sequelize, DataTypes) {
     //     isUrl: true
     //   }
     // },
-    // fosterStatus: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   default: "current"
-    // },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      default: "current"
+    },
     created_at: {
       type: DataTypes.DATE,
       defaultValue: sequelize.literal("NOW()")
