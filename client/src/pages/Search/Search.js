@@ -1,23 +1,22 @@
-import React from 'react'
-// import { Col, CardPanel } from 'react-materialize';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './Search.css'
-import Filter from '../../components/Filter';
-import Animals from '../../components/Animals';
-import API from '../../utils/API';
+import React from "react";
+import SearchForm from "../../components/SearchForm";
+import AnimalResult from "../../components/AnimalResult";
+import API from "../../utils/API";
 
+class Search extends React.Component {
+  state = {
+    animals: [],
+    searchZip: "",
+    animalType: "",
+  };
 
-function Search() {
-  return (
-    <div>
-        Hello World! - Search Available Fosters!
-        <Filter />
-        <Animals />
-    </div>
-  );
-}
+  handleInputChange = event => {
+    this.setState({searchZip: event.target.value});
+  };
 
-export default Search
+  handleSelectionChange = event => {
+    this.setState({animalType: event.target.value});
+  };
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -36,12 +35,12 @@ export default Search
       this.setState({ animals: details })
       console.log({ animals: details });
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log("error", err));
   };
 
   saveAnimal = animalID => {
     console.log("Save animal button clicked ")
-    const animal = this.state.animals.find(animal => animal.animalID === animalID);
+    const animal = this.state.animals.find(animal => animal.value.animalID === animalID);
     API.saveAnimal({
       animalID: animal.value.animalID,
       animalName: animal.value.animalName,
@@ -51,39 +50,38 @@ export default Search
       animalThumbnailUrl: animal.value.animalThumbnailUrl,
       animalHouseTrained: animal.value.animalHouseTrained,
       animalDeclawed: animal.value.animalDeclawed,
+      animalSpecies: this.state.animalType,
       animalLocation: animal.value.animalLocation,
       fosterStatus: "current"
     }).then(() => {
       this.setState({
-        animals: this.state.animals.filter(animal => animal.animalID !== animalID)
+        animals: this.state.animals.filter(animal => animal.value.animalID !== animalID)
       });
     }).catch(err => console.log(err));
   };
 
+
   render() {
     return (
       <div>
-        <Filter
+        <SearchForm
           handleInputChange={this.handleInputChange}
           handleSelectionChange={this.handleSelectionChange}
           handleFormSubmit={this.handleFormSubmit} 
           searchZip={this.searchZip}
           animalType={this.animalType}
         />
-
+        
         {this.state.animals.map(animal => (
           <div className="container" key={animal.value.animalID}>
-            <Animals 
+            <AnimalResult 
               animalID={animal.value.animalID}
               animalName={animal.value.animalName}
               animalGeneralAge={animal.value.animalGeneralAge}
               animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
               animalDescriptionPlain={animal.value.animalDescriptionPlain}
               animalThumbnailUrl={animal.value.animalThumbnailUrl}
-              onClick={() => {
-                console.log("clicked?");
-                this.saveAnimal(animal.value.animalID)
-              }}
+              handleAnimalClick={this.saveAnimal}
               buttonText="Foster me"
             />
 
@@ -96,4 +94,4 @@ export default Search
   };
 };
 
-export default Search
+export default Search;

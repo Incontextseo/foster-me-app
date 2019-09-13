@@ -1,4 +1,5 @@
 import React from "react";
+import './SearchForm.css'
 
 function SearchForm(props) {
     const { handleInputChange, handleSelectionChange, handleFormSubmit, searchZip } = props;
