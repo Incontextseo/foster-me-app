@@ -10,7 +10,7 @@ export default {
         
         const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
 
-        // get search variables from form. Replace hardcoded values when form is built
+        // get search variables from form
         searchZip = {searchZip};
         console.log("zip code: ", searchZip);
         animalType = {animalType};
@@ -96,7 +96,9 @@ export default {
         return axios.get("/api/animals/past/");
     },
     // Post route to update foster info in database
-
+    updateAnimal: animalData => {
+        return axios.put("/api/animals/current/", animalData);
+    }
 
 
 };
