@@ -48,7 +48,7 @@ router.route("/current")
     .get(function(req, res) {
         db.Animal.findAll({
             where: {
-                status: current
+                fosterStatus: "current"
             }
         })
     .then(function(dbAnimal) {
@@ -72,7 +72,7 @@ router.route("/past")
     .get(function(req, res) {
         db.Animal.findAll({
             where: {
-                fosterStatus: returned
+                fosterStatus: "returned"
             }
         })
         .then(function(dbAnimal) {
