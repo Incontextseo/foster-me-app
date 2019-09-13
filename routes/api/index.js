@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const api = require('./API');
+const animalsAPI = require('./animalsAPI');
 
 // API routes
-// router.use('/api', api);
+router.use('/animals', animalsAPI);
 
 module.exports = router;

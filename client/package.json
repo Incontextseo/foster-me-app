@@ -14,7 +14,7 @@
   },
   "homepage": "https://incontextseo.github.io/foster-me-app/",
   "scripts": {
-    "start": "set REACT_APP_APIKEY && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
