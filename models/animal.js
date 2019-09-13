@@ -54,7 +54,23 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         isUrl: true
       }
+    },
+    fosterStatus: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      default: "current"
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    updated_at:  DataTypes.DATE,
+    deleted_at: DataTypes.DATE
+    }, 
+    {
+    paranoid: true,
+    underscored: true
     }
-  });
+  );
   return Animal;
 };

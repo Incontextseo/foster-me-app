@@ -12,7 +12,7 @@
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.6"
   },
-  "homepage": "https://github.com/Incontextseo/foster-me-app#readme",
+  "homepage": "https://github.com/Incontextseo/foster-me-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -32,6 +32,14 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Incontextseo/foster-me-app/issues"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.6"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",

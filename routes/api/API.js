@@ -12,7 +12,7 @@ module.exports = function(app) {
     });
 
     // GET route for current fosters
-    app.get("api/animals/past", function(req, res) {
+    app.get("api/animals/current/", function(req, res) {
         db.Animal.findAll({
             where: {
                 fosterStatus: current
@@ -24,7 +24,7 @@ module.exports = function(app) {
     });
     
     // GET route for past fosters
-    app.get("api/animals/past", function(req, res) {
+    app.get("api/animals/past/", function(req, res) {
         db.Animal.findAll({
             where: {
                 fosterStatus: returned
@@ -36,22 +36,24 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new foster to database
-    app.post("/api/animals", function(req, res) {
-        console.log(req.body);
+    app.post("/api/animals/", function(req, res) {
+        console.log("add animal: ", req.body);
         db.Animal.create({
-        animalID: req.body.animalID,
-        animalSpecies: req.body.animalSpecies,
-        animalSex: req.body.animalSex,
-        animalName: req.body.animalName,
-        animalGeneralAge: req.body.animalGeneralAge,
-        animalGeneralSizePotential: req.body.animalGeneralSizePotential,
-        animalBreed: req.body.animalBreed,
-        animalDescriptionPlain: req.body.animalDescriptionPlain,
-        animalHouseTrained: req.body.animalHouseTrained,
-        animalDeclawed: req.body.animalDeclawed,
-        animalThumbnailUrl: req.body.animalThumbnailUrl
+            animalID: req.body.animalID,
+            animalSpecies: req.body.animalSpecies,
+            animalSex: req.body.animalSex,
+            animalName: req.body.animalName,
+            animalGeneralAge: req.body.animalGeneralAge,
+            animalGeneralSizePotential: req.body.animalGeneralSizePotential,
+            animalBreed: req.body.animalBreed,
+            animalDescriptionPlain: req.body.animalDescriptionPlain,
+            animalHouseTrained: req.body.animalHouseTrained,
+            animalDeclawed: req.body.animalDeclawed,
+            animalThumbnailUrl: req.body.animalThumbnailUrl,
+            createdAt: new Date()
         })
         .then(function(dbAnimal) {
+            console.log("dbAnimal: ", dbAnimal);
             res.json(dbAnimal);
         });
     });
@@ -69,11 +71,11 @@ module.exports = function(app) {
       });
 
       // PUT route for updating fost info
-    app.put("/api/animals", function(req, res) {
+    app.put("/api/animals/", function(req, res) {
         db.Animal.update(req.body,
         {
             where: {
-            animalID: req.body.animalID
+            animalID: req.params.animalID
             }
         })
         .then(function(dbAnimal) {
