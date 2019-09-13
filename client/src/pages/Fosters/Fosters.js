@@ -13,6 +13,7 @@ class Fosters extends React.Component {
   loadCurrentFosters = () => {
     API.getCurrentFosters()
     .then(res => {
+      console.log("res.data from getCurrentFosters method: ", res.data)
       this.setState({animals: res.data})
     })
     .catch(err => console.log(err))

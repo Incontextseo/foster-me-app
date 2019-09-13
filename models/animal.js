@@ -58,18 +58,20 @@ module.exports = function(sequelize, DataTypes) {
     fosterStatus: {
       type: DataTypes.STRING,
       allowNull: false,
-      default: "current"
+      defaultValue: "current"
     },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false
+      defaultValue: sequelize.literal("NOW()")
     },
-    updated_at:  DataTypes.DATE,
+    updated_at:  {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("NOW()")
+    },
     deleted_at: DataTypes.DATE
-    }, 
+    },  
     {
-    paranoid: true,
-    underscored: true
+    paranoid: true
     }
   );
   return Animal;
