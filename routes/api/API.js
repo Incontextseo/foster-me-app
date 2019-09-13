@@ -4,7 +4,7 @@ var db = require("../../models");
 module.exports = function(app) {
 
     // GET route for all fosters
-    app.get("api/animals/", function(req, res) {
+    app.get("api/animals", function(req, res) {
         db.Animal.findAll({})
         .then(function(dbAnimal) {
             res.json(dbAnimal);
@@ -12,10 +12,10 @@ module.exports = function(app) {
     });
 
     // GET route for current fosters
-    app.get("api/animals/current/", function(req, res) {
+    app.get("api/animals/current", function(req, res) {
         db.Animal.findAll({
             where: {
-                fosterStatus: current
+                status: current
             }
         })
         .then(function(dbAnimal) {
@@ -24,7 +24,7 @@ module.exports = function(app) {
     });
     
     // GET route for past fosters
-    app.get("api/animals/past/", function(req, res) {
+    app.get("api/animals/past", function(req, res) {
         db.Animal.findAll({
             where: {
                 fosterStatus: returned
@@ -36,7 +36,7 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new foster to database
-    app.post("/api/animals/", function(req, res) {
+    app.post("/api/animals", function(req, res) {
         console.log("add animal: ", req.body);
         db.Animal.create({
             animalID: req.body.animalID,
@@ -71,7 +71,7 @@ module.exports = function(app) {
       });
 
       // PUT route for updating fost info
-    app.put("/api/animals/", function(req, res) {
+    app.put("/api/animals", function(req, res) {
         db.Animal.update(req.body,
         {
             where: {

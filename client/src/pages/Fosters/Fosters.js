@@ -7,9 +7,10 @@ import API from '../../utils/API';
 
 class Fosters extends React.Component {
   state = {
-    animals: []
+    animals: [],
   };
 
+  // Method to Query the API/Database to GET all the books in the database.
   loadCurrentFosters = () => {
     API.getCurrentFosters()
     .then(res => {

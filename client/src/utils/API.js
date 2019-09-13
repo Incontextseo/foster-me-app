@@ -42,7 +42,7 @@ export default {
                     {
                         "fieldName": "animalLocationDistance",
                         "operation": "radius",
-                        "criteria": "5"
+                        "criteria": "10"
                     },
                     // {
                     //     "fieldName": "animalNeedsFoster",
@@ -84,11 +84,11 @@ export default {
     },
     // Get current fosters from database
     getCurrentFosters: () => {
-        return axios.get("/api/animals/current/");
+        return axios.get("/api/animals/current");
     },
     // Get past fosters from database
     getPastFosters: () => {
-        return axios.get("/api/animals/past/");
+        return axios.get("/api/animals/past");
     },
     // Post route to update foster info in database
 
