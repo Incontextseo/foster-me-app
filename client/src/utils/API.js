@@ -73,6 +73,11 @@ export default {
             .catch(err => console.log(err));
 
     },
+    // Get all animals
+    getDbAnimals: () => {
+        return axios.get("/api/animals/");
+    },
+
     // Get specific animal by ID
     getAnimal: animalID => {
         return axios.get("/api/animals/" + animalID);

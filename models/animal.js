@@ -2,27 +2,32 @@ module.exports = function(sequelize, DataTypes) {
   var Animal = sequelize.define("Animal", {
     animalID: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     animalSpecies: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalLocation: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true,
+        defaultValue: 0
     },
     animalSex: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalName: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalGeneralAge: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: ""
     },
     animalGeneralSizePotential: {
         type: DataTypes.STRING,
@@ -58,18 +63,20 @@ module.exports = function(sequelize, DataTypes) {
     fosterStatus: {
       type: DataTypes.STRING,
       allowNull: false,
-      default: "current"
+      defaultValue: "current"
     },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false
+      defaultValue: sequelize.literal("NOW()")
     },
-    updated_at:  DataTypes.DATE,
+    updated_at:  {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("NOW()")
+    },
     deleted_at: DataTypes.DATE
-    }, 
+    },  
     {
-    paranoid: true,
-    underscored: true
+    paranoid: true
     }
   );
   return Animal;
