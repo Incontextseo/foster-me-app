@@ -3,3 +3,13 @@ DROP DATABASE IF EXISTS fosterme_db;
 -- Creates the database --
 CREATE DATABASE fosterme_db;
 USE fosterme_db;
+
+ALTER TABLE `animals` MODIFY `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+ALTER TABLE `animals` MODIFY `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+
+INSERT INTO animals (animal_id, species, location, sex, name) 
+VALUES ("001", "cat", "53213", "F", "Ernestine");
+INSERT INTO animals (animal_id, species, location, sex, name) 
+VALUES ("002", "dog", "53213", "M", "Ernie");
+
+SELECT * FROM animals

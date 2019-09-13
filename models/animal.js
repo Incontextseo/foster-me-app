@@ -1,70 +1,73 @@
 module.exports = function(sequelize, DataTypes) {
   var Animal = sequelize.define("Animal", {
-    animalID: {
+    animal_id: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    animalSpecies: {
+    species: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    animalLocation: {
+    location: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    animalSex: {
+    sex: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    animalName: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    animalGeneralAge: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    animalGeneralSizePotential: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    animalBreed: {
-      type: DataTypes.TEXT,
-      allowNull: true
-    },
-    animalDescriptionPlain: {
-      type: DataTypes.TEXT,
-      allowNull: true
-    },
-    animalHouseTrained: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    animalDeclawed: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
+    // animalGeneralAge: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true
+    // },
+    // animalGeneralSizePotential: {
+    //     type: DataTypes.STRING,
+    //     allowNull: true
+    // },
+    // animalBreed: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: true
+    // },
+    // animalDescriptionPlain: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: true
+    // },
+    // animalHouseTrained: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true
+    // },
+    // animalDeclawed: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true
+    // },
     // animalPictures: {
     //     type: Array(DataTypes.STRING),
     //     allowNull: true
     // }
-    animalThumbnailUrl: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        isUrl: true
-      }
-    },
-    fosterStatus: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      default: "current"
-    },
+    // animalThumbnailUrl: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: false,
+    //   validate: {
+    //     isUrl: true
+    //   }
+    // },
+    // fosterStatus: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   default: "current"
+    // },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false
+      defaultValue: sequelize.literal("NOW()")
     },
-    updated_at:  DataTypes.DATE,
+    updated_at:  {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("NOW()")
+    },
     deleted_at: DataTypes.DATE
     }, 
     {

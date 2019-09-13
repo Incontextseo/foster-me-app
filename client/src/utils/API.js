@@ -8,7 +8,7 @@ export default {
             "Content-Type": "application/json",
           };
         
-        const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
+        const REACT_APP_APIKEY = "Zu9AheIg";
 
         // get search variables from form. Replace hardcoded values when form is built
         searchZip = {searchZip};
@@ -37,12 +37,12 @@ export default {
                     {
                         "fieldName": "animalLocation",
                         "operation": "equals",
-                        "criteria": searchZip
+                        "criteria": "53208"
                     },
                     {
                         "fieldName": "animalLocationDistance",
                         "operation": "radius",
-                        "criteria": "50"
+                        "criteria": "5"
                     },
                     // {
                     //     "fieldName": "animalNeedsFoster",
