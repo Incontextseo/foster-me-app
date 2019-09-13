@@ -2,7 +2,7 @@ import React from "react";
 
 function AnimalResult(props) {
 
-    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, animalGeneralSizePotential, animalBreed, animalDescriptionPlain, onClick, buttonText} = props;
+    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, animalGeneralSizePotential, animalBreed, animalDescriptionPlain, handleAnimalClick, buttonText} = props;
 
     return (
 
@@ -15,7 +15,7 @@ function AnimalResult(props) {
             <p>{animalDescriptionPlain}</p>
             <button 
                 className="btn waves-effect waves-light" 
-                onClick={onClick}
+                onClick={() => handleAnimalClick(animalID)}
                 data-id={animalID}
             >{buttonText}</button>
 

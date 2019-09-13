@@ -2,27 +2,32 @@ module.exports = function(sequelize, DataTypes) {
   var Animal = sequelize.define("Animal", {
     animalID: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     animalSpecies: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalLocation: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true,
+        defaultValue: 0
     },
     animalSex: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalName: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
+        defaultValue: ""
     },
     animalGeneralAge: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: ""
     },
     animalGeneralSizePotential: {
         type: DataTypes.STRING,

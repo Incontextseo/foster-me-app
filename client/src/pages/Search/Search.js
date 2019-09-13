@@ -42,7 +42,7 @@ class Search extends React.Component {
   };
 
   saveAnimal = animalID => {
-    console.log("Save animal button clicked")
+    console.log("Save animal button clicked ")
     const animal = this.state.animals.find(animal => animal.animalID === animalID);
     API.saveAnimal({
       animalID: animal.value.animalID,
@@ -53,6 +53,7 @@ class Search extends React.Component {
       animalThumbnailUrl: animal.value.animalThumbnailUrl,
       animalHouseTrained: animal.value.animalHouseTrained,
       animalDeclawed: animal.value.animalDeclawed,
+      animalLocation: animal.value.animalLocation,
       fosterStatus: "current"
     }).then(() => {
       this.setState({

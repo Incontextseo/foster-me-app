@@ -24,7 +24,8 @@ class Search extends React.Component {
     API.getAnimals(this.state.searchZip, this.state.animalType)
     .then( results => {
 
-      // RescueGroups.org API returns results as object instead of array so loop through results & push to array so map function works
+      // RescueGroups.org API returns results as object instead of array 
+      //so loop through results & push to array so map function works
       let details = [];
 
       for (var i in results.data) {
@@ -34,8 +35,31 @@ class Search extends React.Component {
       this.setState({ animals: details })
       console.log({ animals: details });
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log("error", err));
   };
+
+  saveAnimal = animalID => {
+    console.log("Save animal button clicked ")
+    const animal = this.state.animals.find(animal => animal.value.animalID === animalID);
+    API.saveAnimal({
+      animalID: animal.value.animalID,
+      animalName: animal.value.animalName,
+      animalGeneralAge: animal.value.animalGeneralAge,
+      animalGeneralSizePotential: animal.value.animalGeneralSizePotential,
+      animalDescriptionPlain: animal.value.animalDescriptionPlain,
+      animalThumbnailUrl: animal.value.animalThumbnailUrl,
+      animalHouseTrained: animal.value.animalHouseTrained,
+      animalDeclawed: animal.value.animalDeclawed,
+      animalSpecies: this.state.animalType,
+      animalLocation: animal.value.animalLocation,
+      fosterStatus: "current"
+    }).then(() => {
+      this.setState({
+        animals: this.state.animals.filter(animal => animal.value.animalID !== animalID)
+      });
+    }).catch(err => console.log(err));
+  };
+
 
   render() {
     return (
@@ -57,7 +81,7 @@ class Search extends React.Component {
               animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
               animalDescriptionPlain={animal.value.animalDescriptionPlain}
               animalThumbnailUrl={animal.value.animalThumbnailUrl}
-            //   onClick={() => this.saveAnimal(animal.animalID)}
+              handleAnimalClick={this.saveAnimal}
               buttonText="Foster me"
             />
 
