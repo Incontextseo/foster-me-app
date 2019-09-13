@@ -2,7 +2,7 @@ import React from 'react'
 // import { Col, CardPanel } from 'react-materialize';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Fosters.css'
-import Animals from '../../components/Animals';
+import AnimalResult from "../../components/AnimalResult";
 import API from '../../utils/API';
 
 class Fosters extends React.Component {
@@ -30,7 +30,7 @@ class Fosters extends React.Component {
         <h1>Your Current Fosters</h1>
         {this.state.animals.map(animal => (
           <div className="container" key={animal.animalID}>
-            <Animals 
+            <AnimalResult
               animalID={animal.animalID}
               animalName={animal.animalName}
               animalGeneralAge={animal.animalGeneralAge}
