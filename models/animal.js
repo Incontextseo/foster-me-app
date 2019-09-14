@@ -65,6 +65,76 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: "current"
     },
+    fosterReason: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "",
+    },
+    interactWithChildren: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    interactWithPets: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    interactionComments: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      defaultValue: ""
+    },
+    initialReaction: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    animalOKWithKids: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    animalOKWithAdults: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    animalOKForSeniors: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    animalOKWithCats: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
+    animalOKWithDogs: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "No"
+    },
     created_at: {
       type: DataTypes.DATE,
       defaultValue: sequelize.literal("NOW()")

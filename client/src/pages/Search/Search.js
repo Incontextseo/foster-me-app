@@ -52,7 +52,8 @@ class Search extends React.Component {
       animalDeclawed: animal.value.animalDeclawed,
       animalSpecies: this.state.animalType,
       animalLocation: animal.value.animalLocation,
-      fosterStatus: "current"
+      animalSex: animal.value.animalSex,
+      fosterStatus: "current",
     }).then(() => {
       this.setState({
         animals: this.state.animals.filter(animal => animal.value.animalID !== animalID)
