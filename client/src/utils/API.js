@@ -96,6 +96,7 @@ export default {
         return axios.get("/api/animals/past/");
     },
     // Post route to update foster info in database
+    
     // Get list foster families from database
     getFosters: () => {
         return axios.get("/api/fosters/");
