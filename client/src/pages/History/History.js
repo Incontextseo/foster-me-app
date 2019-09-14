@@ -1,6 +1,4 @@
 import React from 'react'
-// import { Col, CardPanel } from 'react-materialize';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './History.css'
 import AnimalResult from "../../components/AnimalResult";
 import API from '../../utils/API';
