@@ -51,8 +51,9 @@ router.route("/current")
                 fosterStatus: "current"
             }
         })
-    .then(function(dbAnimal) {
-        res.json(dbAnimal);
+        .then(function(dbAnimal) {
+            res.json(dbAnimal);
+        });
     })
     .put(function(req, res) {
         db.Animal.update(req.body,
@@ -64,8 +65,8 @@ router.route("/current")
         .then(function(dbAnimal) {
             res.json(dbAnimal);
         });
-    })
-});
+    });
+
 
 //routes match /api/animals/past
 router.route("/past")
