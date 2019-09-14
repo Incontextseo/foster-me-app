@@ -1,3 +1,9 @@
+
+.pinned{
+    display: flex;
+    flex-direction: column;
+}
+
 .svg-inline--fa {
     font-size: 100px;
 }

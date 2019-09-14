@@ -3,6 +3,7 @@ import React from 'react'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Home.css'
 import Login from '../../components/Login';
+import Modal from '../../components/Modal';
 
 console.log ("This is the Homepage")
 function Home() {
@@ -10,6 +11,8 @@ function Home() {
     <div>
         Hello World! - Welcome to Foster Me!
         <Login />
+  
+     <Modal/>
     </div>
   );
 }
