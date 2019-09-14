@@ -35,8 +35,7 @@ class History extends React.Component {
               animalGeneralSizePotential={animal.animalGeneralSizePotential}
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
-              // onClick={() => this.updateAnimal(animal.animalID)}
-              buttonText="Update foster info"
+              buttonText="View Profile"
             />
 
           </div>

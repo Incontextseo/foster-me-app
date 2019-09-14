@@ -1,3 +1,6 @@
+const db = require("../../models");
+const router = require("express").Router();
+
 // routes match /api/animals
 router.route("/")
     .get(function(req, res) {
