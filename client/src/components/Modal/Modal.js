@@ -4,6 +4,7 @@ import { MDBInput } from "mdbreact";
 import './Modal.css';
 
 
+
 class ModalPage extends Component {
 state = {
   modal: false
@@ -35,6 +36,5 @@ render() {
   }
 }
 
+
 export default ModalPage;
-
-
