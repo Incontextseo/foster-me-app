@@ -8,7 +8,7 @@ export default {
             "Content-Type": "application/json",
           };
         
-        const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
+      //  const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
 
         // get search variables from form. Replace hardcoded values when form is built
         searchZip = {searchZip};
@@ -18,7 +18,7 @@ export default {
         
         // json data to post to RescueGroups api to get animal results
         const data = {
-            "apikey": REACT_APP_APIKEY,
+            "apikey": "Zu9AheIg",
             "objectType":"animals",
             "objectAction":"publicSearch",
             "search":
