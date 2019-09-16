@@ -3,6 +3,7 @@ import React from 'react'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Fosters.css'
 import AnimalResult from "../../components/AnimalResult";
+import ModalUpdateForm from "../../components/Modal/ModalUpdateForm";
 import API from '../../utils/API';
 
 class Fosters extends React.Component {
@@ -38,9 +39,15 @@ class Fosters extends React.Component {
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
               // onClick={() => this.updateAnimal(animal.animalID)}
-              buttonText="Update foster info"
+              // buttonText="Update foster info"
             />
-
+            <ModalUpdateForm 
+              animalID={animal.animalID}
+              animalName={animal.animalName}
+              animalGeneralAge={animal.animalGeneralAge}
+              animalSex={animal.animalSex}
+              animalBreed={animal.animalBreed}
+            />
           </div>
 
         ))}

@@ -123,27 +123,19 @@ module.exports = function(sequelize, DataTypes) {
     animalOKForSeniors: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithCats: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithDogs: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("NOW()")
-    },
-    updated_at:  {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("NOW()")
-    },
-    deleted_at: DataTypes.DATE
+    deletedAt: DataTypes.DATE
     },  
     {
     paranoid: true
