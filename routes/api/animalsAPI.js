@@ -1,3 +1,4 @@
+const db = require("../../models");
 const router = require("express").Router();
 
 // routes match /api/animals
@@ -49,10 +50,9 @@ router.route("/current")
             where: {
                 fosterStatus: "current"
             }
+        }).then(function(dbAnimal) {
+        res.json(dbAnimal);
         })
-        .then(function(dbAnimal) {
-            res.json(dbAnimal);
-        });
     })
     .put(function(req, res) {
         db.Animal.update(req.body,
@@ -64,7 +64,7 @@ router.route("/current")
         .then(function(dbAnimal) {
             res.json(dbAnimal);
         });
-    });
+    })
 
 
 //routes match /api/animals/past

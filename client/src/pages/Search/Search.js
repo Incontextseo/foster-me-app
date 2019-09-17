@@ -35,7 +35,7 @@ class Search extends React.Component {
       this.setState({ animals: details })
       console.log({ animals: details });
     })
-    .catch(err => console.log("error", err));
+    .catch(err => console.log("error: ", err));
   };
 
   saveAnimal = animalID => {

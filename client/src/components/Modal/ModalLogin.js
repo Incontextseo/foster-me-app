@@ -5,7 +5,7 @@ import './Modal.css';
 
 
 
-class ModalPage extends Component {
+class ModalLogin extends Component {
 state = {
   modal: false
 }
@@ -37,4 +37,4 @@ render() {
 }
 
 
-export default ModalPage;
+export default ModalLogin;
