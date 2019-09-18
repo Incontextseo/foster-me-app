@@ -1,9 +1,9 @@
 import React from "react";
-import './AnimalResult.css'
+import './AnimalResult.css';
 
 function AnimalResult(props) {
 
-    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, animalGeneralSizePotential, animalBreed, animalDescriptionPlain, handleAnimalClick, buttonText} = props;
+    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, animalGeneralSizePotential, animalBreed, animalDescriptionPlain} = props;
 
     return (
 
@@ -14,12 +14,6 @@ function AnimalResult(props) {
             <p>Size: {animalGeneralSizePotential || "Size not provided"}</p>
             <p>Breed: {animalBreed || "Breed unknown"}</p>
             <p>{animalDescriptionPlain}</p>
-            <button 
-                className="btn waves-effect waves-light" 
-                onClick={() => handleAnimalClick(animalID)}
-                data-id={animalID}
-            >{buttonText}</button>
-
         </article>
     )}
 

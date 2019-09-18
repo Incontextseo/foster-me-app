@@ -8,7 +8,7 @@ export default {
             "Content-Type": "application/json",
           };
         
-        const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
+       const REACT_APP_APIKEY = process.env.REACT_APP_APIKEY;
 
         // get search variables from form. Replace hardcoded values when form is built
         searchZip = {searchZip};
@@ -96,11 +96,18 @@ export default {
         return axios.get("/api/animals/past/");
     },
     // Post route to update foster info in database
+    updateAnimal: animalData => {
+        console.log("data to update: ", animalData);
+        return axios.put("/api/animals/current/", animalData)
+    },
     
     // Get list foster families from database
     getFosters: () => {
         return axios.get("/api/fosters/");
     },
+    deleteAnimal: animalID => {
+        return axios.delete("/api/animals/" + animalID);
+    }
 
 
 };
