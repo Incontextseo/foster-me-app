@@ -11,7 +11,7 @@ class History extends React.Component {
   loadPastFosters = () => {
     API.getPastFosters()
     .then(res => {
-      console.log("res.data from getCurrentFosters method: ", res.data)
+      console.log("res.data from getPastFosters method: ", res.data)
       this.setState({animals: res.data})
     })
     .catch(err => console.log(err))
@@ -25,7 +25,7 @@ class History extends React.Component {
   render() {
     return (
       <div>
-        <h1>Your Current Fosters</h1>
+        <h1>Your Past Fosters</h1>
         {this.state.animals.map(animal => (
           <div className="container" key={animal.animalID}>
             <AnimalResult

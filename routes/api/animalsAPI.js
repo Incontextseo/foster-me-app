@@ -50,22 +50,22 @@ router.route("/current")
             where: {
                 fosterStatus: "current"
             }
+        }).then(function(dbAnimal) {
+        res.json(dbAnimal);
         })
-        .then(function(dbAnimal) {
-            res.json(dbAnimal);
-        });
     })
     .put(function(req, res) {
+        console.log("updating animal", req.body)
         db.Animal.update(req.body,
             {
                 where: {
-                animalID: req.params.animalID
+                animalID: req.body.animalID
                 }
         })
         .then(function(dbAnimal) {
             res.json(dbAnimal);
         });
-    });
+    })
 
 
 //routes match /api/animals/past

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Login from '../../components/Login';
+
 import API from "../../utils/API";
 
 class Home extends React.Component {
@@ -48,15 +49,5 @@ class Home extends React.Component {
     );
   };
 };
-
-// console.log ("This is the Homepage")
-// function Home() {
-//   return (
-//     <div>
-//         Hello World! - Welcome to Foster Me!
-//         <Login />
-//     </div>
-//   );
-// }
 
 export default Home

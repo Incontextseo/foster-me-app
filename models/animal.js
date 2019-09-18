@@ -113,26 +113,27 @@ module.exports = function(sequelize, DataTypes) {
     animalOKWithKids: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithAdults: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKForSeniors: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithCats: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithDogs: {
       type: DataTypes.STRING,
       allowNull: true,
+<<<<<<< HEAD
       defaultValue: "No"
     },
     animalAdopted: {
@@ -141,6 +142,15 @@ module.exports = function(sequelize, DataTypes) {
     {
     paranoid: true
     }
+=======
+      defaultValue: ""
+    },
+    // deletedAt: DataTypes.DATE
+    },  
+    // {
+    // paranoid: true
+    // }
+>>>>>>> f904272c355cbaa717e9dea1eb3882d732a5f91b
   );
   return Animal;
 };
