@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/foster-me-app/static/css/main.2cce8147.chunk.css",
-    "main.js": "/foster-me-app/static/js/main.6092c3ef.chunk.js",
-    "main.js.map": "/foster-me-app/static/js/main.6092c3ef.chunk.js.map",
-    "runtime~main.js": "/foster-me-app/static/js/runtime~main.e2508739.js",
-    "runtime~main.js.map": "/foster-me-app/static/js/runtime~main.e2508739.js.map",
-    "static/js/2.713a8341.chunk.js": "/foster-me-app/static/js/2.713a8341.chunk.js",
-    "static/js/2.713a8341.chunk.js.map": "/foster-me-app/static/js/2.713a8341.chunk.js.map",
+    "main.css": "/foster-me-app/static/css/main.6020811e.chunk.css",
+    "main.js": "/foster-me-app/static/js/main.c4396a50.chunk.js",
+    "main.js.map": "/foster-me-app/static/js/main.c4396a50.chunk.js.map",
+    "runtime~main.js": "/foster-me-app/static/js/runtime~main.7379e07d.js",
+    "runtime~main.js.map": "/foster-me-app/static/js/runtime~main.7379e07d.js.map",
+    "static/js/2.4c6f3929.chunk.js": "/foster-me-app/static/js/2.4c6f3929.chunk.js",
+    "static/js/2.4c6f3929.chunk.js.map": "/foster-me-app/static/js/2.4c6f3929.chunk.js.map",
     "index.html": "/foster-me-app/index.html",
-    "precache-manifest.d412991a08adf6f9c90f8412f69493ea.js": "/foster-me-app/precache-manifest.d412991a08adf6f9c90f8412f69493ea.js",
+    "precache-manifest.eaf1d4df5a019983aa5a1a4ac0868741.js": "/foster-me-app/precache-manifest.eaf1d4df5a019983aa5a1a4ac0868741.js",
     "service-worker.js": "/foster-me-app/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/foster-me-app/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/foster-me-app/static/media/logo.5d5d9eef.svg"
+    "static/css/main.6020811e.chunk.css.map": "/foster-me-app/static/css/main.6020811e.chunk.css.map"
   }
 }

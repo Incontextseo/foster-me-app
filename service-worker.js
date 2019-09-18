@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/foster-me-app/precache-manifest.d412991a08adf6f9c90f8412f69493ea.js"
+  "/foster-me-app/precache-manifest.eaf1d4df5a019983aa5a1a4ac0868741.js"
 );
 
 self.addEventListener('message', (event) => {
