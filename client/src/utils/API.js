@@ -105,6 +105,9 @@ export default {
     getFosters: () => {
         return axios.get("/api/fosters/");
     },
+    deleteAnimal: animalID => {
+        return axios.delete("/api/animals/" + animalID);
+    }
 
 
 };

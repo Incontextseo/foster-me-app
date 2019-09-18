@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "../../components/SearchForm";
 import AnimalResult from "../../components/AnimalResult";
+import Button from "../../components/Button";
 import API from "../../utils/API";
 
 class Search extends React.Component {
@@ -82,8 +83,14 @@ class Search extends React.Component {
               animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
               animalDescriptionPlain={animal.value.animalDescriptionPlain}
               animalThumbnailUrl={animal.value.animalThumbnailUrl}
-              handleAnimalClick={this.saveAnimal}
+              // handleAnimalClick={this.saveAnimal}
+              // buttonText="Foster me"
+            />
+            <Button 
+              // handleAnimalClick={this.saveAnimal}
+              onClick={() => this.saveAnimal(animal.value.animalID)}
               buttonText="Foster me"
+              animalID={animal.value.animalID}
             />
 
           </div>

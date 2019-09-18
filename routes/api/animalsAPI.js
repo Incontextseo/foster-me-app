@@ -55,10 +55,11 @@ router.route("/current")
         })
     })
     .put(function(req, res) {
+        console.log("updating animal", req.body)
         db.Animal.update(req.body,
             {
                 where: {
-                animalID: req.params.animalID
+                animalID: req.body.animalID
                 }
         })
         .then(function(dbAnimal) {

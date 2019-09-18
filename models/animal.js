@@ -113,12 +113,12 @@ module.exports = function(sequelize, DataTypes) {
     animalOKWithKids: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKWithAdults: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     animalOKForSeniors: {
       type: DataTypes.STRING,
@@ -135,11 +135,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: ""
     },
-    deletedAt: DataTypes.DATE
+    // deletedAt: DataTypes.DATE
     },  
-    {
-    paranoid: true
-    }
+    // {
+    // paranoid: true
+    // }
   );
   return Animal;
 };
