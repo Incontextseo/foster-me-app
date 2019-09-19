@@ -26,7 +26,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is Homepage!</h1>
+        <h1>This is the Homepage!</h1>
         <p>Once logged in, you see a menu of buttons to go to:</p>
           <ul>
             <li>Search and sign-up for fosters</li>

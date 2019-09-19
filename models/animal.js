@@ -133,16 +133,6 @@ module.exports = function(sequelize, DataTypes) {
     animalOKWithDogs: {
       type: DataTypes.STRING,
       allowNull: true,
-<<<<<<< HEAD
-      defaultValue: "No"
-    },
-    animalAdopted: {
-      
-    }  
-    {
-    paranoid: true
-    }
-=======
       defaultValue: ""
     },
     // deletedAt: DataTypes.DATE
@@ -150,7 +140,6 @@ module.exports = function(sequelize, DataTypes) {
     // {
     // paranoid: true
     // }
->>>>>>> f904272c355cbaa717e9dea1eb3882d732a5f91b
   );
   return Animal;
 };
