@@ -57,7 +57,7 @@ class Fosters extends React.Component {
               animalID={animal.animalID}
             />
 
-            <ModalUpdateForm 
+            <ModalUpdateForm
               animalID={animal.animalID}
               animalName={animal.animalName}
               animalGeneralAge={animal.animalGeneralAge}
@@ -71,14 +71,5 @@ class Fosters extends React.Component {
     )
   }
 };
-
-// function Fosters() {
-//   return (
-//     <div>
-//         Hello World! - View Your Current Fosters!
-//         <Animals />
-//     </div>
-//   );
-// }
 
 export default Fosters

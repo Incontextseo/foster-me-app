@@ -6,7 +6,7 @@ function UpdateForm(props) {
     const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, handleChange } = props;
 
     return (
-        <div className="col-md-12">
+        <div className="col-md-12" backdrop="static">
             <form>
                 <h3>Foster info</h3>
 
