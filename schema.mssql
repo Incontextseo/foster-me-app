@@ -1,0 +1,28 @@
+-- Drops the database if it exists currently --
+DROP DATABASE IF EXISTS fosterme_db;
+-- Creates the database --
+CREATE DATABASE fosterme_db;
+USE fosterme_db;
+
+ALTER TABLE `animals` MODIFY `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+ALTER TABLE `animals` MODIFY `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+
+ALTER TABLE `fosters` MODIFY `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+ALTER TABLE `fosters` MODIFY `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+
+INSERT INTO animals (animalID, animalSpecies, animalLocation, animalSex, animalName, animalThumbnailURL, fosterStatus, animalGeneralAge) 
+VALUES ("201", "cat", "53213", "F", "Ernestine", "http://g.petango.com/photos/101/c83dee18-ae6d-4499-9fb5-8e8a2e494908_TN1.jpg", "current", "Adult");
+INSERT INTO animals (animalID, animalSpecies, animalLocation, animalSex, animalName, animalThumbnailURL, fosterStatus, animalGeneralAge) 
+VALUES ("202", "dog", "53213", "M", "Ernie", "http://g.petango.com/photos/101/c83dee18-ae6d-4499-9fb5-8e8a2e494908_TN1.jpg", "returned", "Senior");
+
+INSERT INTO fosters (fosterID, fosterName, fosterPassword)
+VALUES ("001", "JC", "password");
+INSERT INTO fosters (fosterID, fosterName, fosterPassword)
+VALUES ("002", "Marie", "password");
+INSERT INTO fosters (fosterID, fosterName, fosterPassword)
+VALUES ("003", "Kenna", "password");
+INSERT INTO fosters (fosterID, fosterName, fosterPassword)
+VALUES ("004", "JD", "password");
+
+SELECT * FROM fosters;
+SELECT * FROM animals
