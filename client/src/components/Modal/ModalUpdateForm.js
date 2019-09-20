@@ -86,7 +86,7 @@ render() {
     <MDBContainer>
       <MDBBtn data-id={this.props.animalID} onClick={this.toggle}>Update foster info</MDBBtn>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="fluid">
-        <MDBModalHeader toggle={this.toggle}>Update info on your foster animal</MDBModalHeader>
+        <MDBModalHeader toggle={this.toggle}>Update your foster's profile</MDBModalHeader>
         <MDBModalBody>
             <UpdateForm 
                 handleChange={this.handleChange}
