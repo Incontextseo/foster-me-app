@@ -1,5 +1,5 @@
-import React from 'react'
-import './History.css'
+import React from 'react';
+import './History.css';
 import AnimalResult from "../../components/AnimalResult";
 import API from '../../utils/API';
 
@@ -35,8 +35,6 @@ class History extends React.Component {
               animalGeneralSizePotential={animal.animalGeneralSizePotential}
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
-              // onClick={() => this.updateAnimal(animal.animalID)}
-              buttonText="Update foster info"
             />
 
           </div>
@@ -46,14 +44,5 @@ class History extends React.Component {
     )
   }
 };
-
-// function Fosters() {
-//   return (
-//     <div>
-//         Hello World! - View Your Current Fosters!
-//         <Animals />
-//     </div>
-//   );
-// }
 
 export default History

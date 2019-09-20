@@ -5,7 +5,7 @@ import './Modal.css';
 import UpdateForm from "../UpdateForm";
 import API from '../../utils/API';
 
-class ModalLogin extends Component {
+class ModalUpdateForm extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -86,7 +86,7 @@ render() {
     <MDBContainer>
       <MDBBtn data-id={this.props.animalID} onClick={this.toggle}>Update foster info</MDBBtn>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="fluid">
-        <MDBModalHeader toggle={this.toggle}>Update info on your foster animal</MDBModalHeader>
+        <MDBModalHeader toggle={this.toggle}>Update your foster's profile</MDBModalHeader>
         <MDBModalBody>
             <UpdateForm 
                 handleChange={this.handleChange}
@@ -107,5 +107,4 @@ render() {
   }
 }
 
-
-export default ModalLogin;
+export default ModalUpdateForm;
