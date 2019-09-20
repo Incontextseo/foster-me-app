@@ -25,6 +25,8 @@ class Search extends React.Component {
     API.getAnimals(this.state.searchZip, this.state.animalType)
     .then( results => {
 
+      console.log(results);
+
       // RescueGroups.org API returns results as object instead of array 
       //so loop through results & push to array so map function works
       let details = [];
@@ -40,7 +42,7 @@ class Search extends React.Component {
   };
 
   saveAnimal = animalID => {
-    console.log("Save animal button clicked ")
+    console.log("Save animal button clicked")
     const animal = this.state.animals.find(animal => animal.value.animalID === animalID);
     API.saveAnimal({
       animalID: animal.value.animalID,
@@ -83,21 +85,15 @@ class Search extends React.Component {
               animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
               animalDescriptionPlain={animal.value.animalDescriptionPlain}
               animalThumbnailUrl={animal.value.animalThumbnailUrl}
-              // handleAnimalClick={this.saveAnimal}
-              // buttonText="Foster me"
             />
             <Button 
-              // handleAnimalClick={this.saveAnimal}
               onClick={() => this.saveAnimal(animal.value.animalID)}
               buttonText="Foster me"
               animalID={animal.value.animalID}
-            />
-
+            />​
           </div>
-
         ))}
       </div>
-
     );
   };
 };
