@@ -2,7 +2,6 @@ import React from "react";
 import "./ViewProfile.css";
 
 function ViewProfile(props) {
-
     const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, fosterReason,
         animalHouseTrained,
         interactWithChildren,
