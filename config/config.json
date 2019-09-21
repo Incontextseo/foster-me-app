@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "kenna10!",
+    "password": "password",
     "database": "fosterme_db",
     "host": "localhost",
     "port": 3306,

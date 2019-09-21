@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline} from "mdbreact";
+MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import Logo from './../../Styles/Images/logo-naked.png';
 import "./Nav.css";
@@ -20,7 +20,7 @@ class Nav extends Component {
         <Router>
           <MDBNavbar color="indigo" dark expand="md">
           <MDBNavbarBrand>
-          <img src={Logo} className="nav__logo"/>
+          <img src={Logo} className="nav__logo" alt=""/>
         </MDBNavbarBrand>
 
 
