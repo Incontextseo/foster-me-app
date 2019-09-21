@@ -8,6 +8,7 @@ export default {
         console.log("animal type: ", animalType);
         return axios.post("/api/animals/search", {searchZip, animalType});
     },
+
     // Get all animals
     getDbAnimals: () => {
         return axios.get("/api/animals/");
@@ -45,7 +46,7 @@ export default {
         return axios.get("/api/fosters/");
     },
     deleteAnimal: animalID => {
-        return axios.delete("/api/animals/" + animalID);
+        return axios.delete("/api/animals/" + animalID)
     }
 
 };

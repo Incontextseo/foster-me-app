@@ -96,12 +96,12 @@ class Search extends React.Component {
                 animalID={animal.value.animalID}
               />​
               <ModalViewProfile
-                animalID={animal.animalID}
-                animalName={animal.animalName}
-                animalGeneralAge={animal.animalGeneralAge}
-                animalSex={animal.animalSex}
-                animalBreed={animal.animalBreed}
-                animalDescriptionPlain={animal.animalDescriptionPlain}
+                animalID={animal.value.animalID}
+                animalName={animal.value.animalName}
+                animalGeneralAge={animal.value.animalGeneralAge}
+                animalSex={animal.value.animalSex}
+                animalBreed={animal.value.animalBreed}
+                animalDescriptionPlain={animal.value.animalDescriptionPlain}
               />
           </div>
 

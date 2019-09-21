@@ -10,3 +10,8 @@
 
 /*# sourceMappingURL=Modal.css.map */
 
+.modal-open {
+  overflow: scroll;
+}
+
+

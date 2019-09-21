@@ -2,8 +2,21 @@ import React from "react";
 import "./ViewProfile.css";
 
 function ViewProfile(props) {
-
-    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, fosterReason} = props;
+    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, fosterReason,
+        animalHouseTrained,
+        interactWithChildren,
+        interactWithPets,
+        interactionComments,
+        initialReaction,
+        greetingReaction,
+        pettingReaction,
+        playReaction,
+        holdingReaction,
+        animalOKWithKids,
+        animalOKWithAdults,
+        animalOKForSeniors,
+        animalOKWithCats,
+        animalOKWithDogs } = props;
 
     return (
         <div className="col-md-12">
@@ -308,7 +321,7 @@ function ViewProfile(props) {
                         </p>
                     </div> */}
                     <div>
-                      <p>animal description:{animalDescriptionPlain}</p>
+                      <p>Animal description: {animalDescriptionPlain}</p>
                     </div>
         </div>
     )

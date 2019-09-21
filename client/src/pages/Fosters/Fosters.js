@@ -5,6 +5,7 @@ import './Fosters.css'
 import AnimalResult from "../../components/AnimalResult";
 import ModalUpdateForm from "../../components/Modal/ModalUpdateForm";
 import Button from "../../components/Button";
+// import ImageUploadForm from "../../components/ImageUploadForm";
 import API from '../../utils/API';
 
 class Fosters extends React.Component {

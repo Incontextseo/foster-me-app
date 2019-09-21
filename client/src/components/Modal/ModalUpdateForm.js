@@ -65,6 +65,7 @@ handleSubmit = event => {
       animalOKWithDogs: this.state.animalOKWithDogs,
       animalDescriptionPlain: this.state.animalDescriptionPlain,
     })
+    .then(this.toggle)
     .then(
         API.getCurrentFosters()
         .then(res => {
