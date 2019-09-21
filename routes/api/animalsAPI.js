@@ -2,9 +2,10 @@ const db = require("../../models");
 const router = require("express").Router();
 const axios = require("axios");
 const Op = require("Sequelize").Op;
+const path = require("path");
+const multer = require("multer");
 const dotenv = require("dotenv");
 dotenv.config();
-
 
 const headers = {
     "Content-Type": "application/json",
@@ -65,12 +66,18 @@ const data = {
     }
 };
 
+const storage = multer.diskStorage({
+    destination: "./public/uploads/",
+    filename: function(req, file, cb){
+       cb(null,"IMAGE-" + Date.now() + path.extname(file.originalname));
+    }
+ });
+ 
 // routes match /api/animals/search
 router.route("/search")
     .post(function(req, res) {
         data.search.filters[0].criteria = req.body.animalType;
         data.search.filters[1].criteria = req.body.searchZip;
-
         axios.post('https://api.rescuegroups.org/http/v2.json', data, {
         headers: headers
         })
@@ -147,6 +154,16 @@ router.route("/current")
             res.json(dbAnimal);
         });
     })
+    .delete(function(req, res) {
+        db.Animal.destroy({
+            where: {
+                animalID: req.body.animalID
+            }
+        })
+        .then(function(dbAnimal) {
+            res.json(dbAnimal);
+        });
+    });
 
 
 //routes match /api/animals/past
@@ -174,7 +191,7 @@ router.route("/past")
         });
     });
 
-    // routes match /api/animal/:animalID
+    // routes match /api/animals/:animalID
     router.route("/:animalID")
         .get(function(req, res) {
             db.Animal.update(req.body,

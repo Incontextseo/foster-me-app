@@ -90,13 +90,10 @@ class Search extends React.Component {
               onClick={() => this.saveAnimal(animal.value.animalID)}
               buttonText="Foster me"
               animalID={animal.value.animalID}
-            />
-
+            />​
           </div>
-
         ))}
       </div>
-
     );
   };
 };

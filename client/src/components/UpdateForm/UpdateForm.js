@@ -322,7 +322,7 @@ function UpdateForm(props) {
                     <div className="form-group">
                         <p>Foster status:</p>
                         <div className="input-field col s12">
-                            <select name="fosterStatus" defaultValue="" className="form-control" onChange={handleChange}>
+                            <select required name="fosterStatus" defaultValue="" className="form-control" onChange={handleChange}>
                                 <option value="" disabled>Select foster status</option>
                                 <option value="current">Current</option>
                                 <option value="returned">Returned</option>

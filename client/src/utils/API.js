@@ -13,7 +13,6 @@ export default {
     getDbAnimals: () => {
         return axios.get("/api/animals/");
     },
-
     // Get specific animal by ID
     getAnimal: animalID => {
         return axios.get("/api/animals/" + animalID);
@@ -42,8 +41,7 @@ export default {
         return axios.get("/api/fosters/");
     },
     deleteAnimal: animalID => {
-        return axios.delete("/api/animals/" + animalID);
+        return axios.delete("/api/animals/" + animalID)
     }
-
 
 };

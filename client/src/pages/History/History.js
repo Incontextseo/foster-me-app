@@ -1,5 +1,5 @@
-import React from 'react'
-import './History.css'
+import React from 'react';
+import './History.css';
 import AnimalResult from "../../components/AnimalResult";
 import API from '../../utils/API';
 
@@ -44,14 +44,5 @@ class History extends React.Component {
     )
   }
 };
-
-// function Fosters() {
-//   return (
-//     <div>
-//         Hello World! - View Your Current Fosters!
-//         <Animals />
-//     </div>
-//   );
-// }
 
 export default History
