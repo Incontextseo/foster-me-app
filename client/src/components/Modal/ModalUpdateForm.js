@@ -12,11 +12,11 @@ class ModalUpdateForm extends Component {
           modal: false,
           animals: [],
           animalID: props.animalID,
-          fosterReason: "",
+          fosterReason: props.fosterReason,
           animalHouseTrained: props.animalHouseTrained,
           interactWithChildren: "",
           interactWithPets: "",
-          interactionComments: "",
+          interactionComments: props.interactionComments,
           initialReaction: "",
           greetingReaction: "",
           pettingReaction: "",
@@ -91,9 +91,11 @@ render() {
                 handleChange={this.handleChange}
                 animalID={this.props.animalID}
                 animalName={this.props.animalName}
+                fosterReason={this.props.fosterReason}
                 animalGeneralAge={this.props.animalGeneralAge}
                 animalSex={this.props.animalSex}
                 animalBreed={this.props.animalBreed}
+                interactionComments={this.props.interactionComments}
                 animalDescriptionPlain={this.props.animalDescriptionPlain}
             />
         </MDBModalBody>

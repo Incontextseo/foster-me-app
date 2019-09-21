@@ -96,12 +96,29 @@ class Search extends React.Component {
                 animalID={animal.value.animalID}
               />​
               <ModalViewProfile
-                animalID={animal.value.animalID}
-                animalName={animal.value.animalName}
-                animalGeneralAge={animal.value.animalGeneralAge}
-                animalSex={animal.value.animalSex}
-                animalBreed={animal.value.animalBreed}
-                animalDescriptionPlain={animal.value.animalDescriptionPlain}
+                animalID = {animal.value.animalID}
+                animalName = {animal.value.animalName} 
+                animalSpecies = {animal.value.animalSpecies} 
+                animalGeneralAge= {animal.value.animalGeneralAge} 
+                animalSex= {animal.value.animalSex}
+                animalBreed= {animal.value.animalBreed}
+                fosterReason= {animal.value.fosterReason}
+                animalHouseTrained= {animal.value.animalHouseTrained}
+                interactWithChildren= {animal.value.interactWithChildren}
+                interactWithPets= {animal.value.interactWithPets}
+                interactionComments= {animal.value.interactionComments}
+                initialReaction= {animal.value.initialReaction}
+                greetingReaction= {animal.value.greetingReaction}
+                pettingReaction= {animal.value.pettingReaction}
+                playReaction= {animal.value.playReaction}
+                holdingReaction= {animal.value.holdingReaction}
+                animalOKWithKids= {animal.value.animalOKWithKids}
+                animalOKWithAdults= {animal.value.animalOKWithAdults}
+                animalOKForSeniors= {animal.value.animalOKForSeniors}
+                animalOKWithCats= {animal.value.animalOKWithCats}
+                animalOKWithDogs= {animal.value.animalOKWithDogs}
+                animalDescriptionPlain= {animal.value.animalDescriptionPlain}
+                animalProfile={animal.value.animalProfile}
               />
           </div>
 

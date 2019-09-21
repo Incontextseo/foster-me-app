@@ -4,7 +4,7 @@ import "./UpdateForm.css";
 
 function UpdateForm(props) {
 
-    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, handleChange} = props;
+    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, handleChange, fosterReason, interactionComments} = props;
 
     return (
         <div className="col-md-12">
@@ -17,7 +17,7 @@ function UpdateForm(props) {
                     <div>
                         Foster Reason:
                         <div className="form-group">
-                            <input name="fosterReason" type="text" onChange={handleChange} />
+                            <input name="fosterReason" value={fosterReason} type="text" onChange={handleChange} />
                         </div>
                     </div>
                 </div>
@@ -50,18 +50,22 @@ function UpdateForm(props) {
                     </div>
                     <div className="form-check form-check-inline">
                         <p>Has the animal interacted with other pets?</p>
-                        <br/>
                         <label className="form-check-label">Yes</label>
                         <input name="interactWithPets" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
 
                         <label className="form-check-label">No</label>
                         <input name="interactWithPets" type="radio" className="form-check-input" value="No" onChange={handleChange} />
                     </div>
-
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <p>Other interaction comments:</p>
                         <label htmlFor="interactionComments">Comments</label> <br />
-                        <input name="interactionComments" type="text" rows="3" className="form-control" onChange={handleChange} />
+                        <input name="interactionComments" type="text" value={interactionComments} rows="3" onChange={handleChange} />
+                    </div> */}
+                    <div>
+                        Other Interaction Comments:
+                        <div className="form-group">
+                            <input name="interactionComments" value={interactionComments} type="text" rows="3" onChange={handleChange} />
+                        </div>
                     </div>
 
                     <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
@@ -274,13 +278,19 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>In your opinion, which home setting would this animal be suited for? (Check all that apply)</p>
-                        <p>
-                            <label htmlFor="animalOKWithKids">
-                                <input type="checkbox" name="animalOKWithKids" className="form-check-input" value="Yes" onChange={handleChange} />
-                                <span>A family with children.</span>
-                            </label>
-                        </p>
+                        <p>In your opinion, which home setting would this animal be suited for?</p>
+                        <div className="form-check form-check-inline">
+                            <div className="row">
+                                <p>A family with children.</p>
+                            </div>
+                            <div className="row">
+                                <label className="form-check-label">Yes</label>
+                                <input name="animalOKWithKids" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
+
+                                <label className="form-check-label">No</label>
+                                <input name="animalOKWithKids" type="radio" className="form-check-input" value="No" onChange={handleChange} />
+                            </div>
+                        </div>
                     </div>
                     <div className="form-group">
                         <p>
