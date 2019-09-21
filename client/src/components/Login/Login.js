@@ -53,7 +53,7 @@ class Login extends Component {
                         <br />
                         <Router>
                             <div>
-                            <p>Or sign up <a href="/Search">here</a></p>
+                            <p>Or sign up <a href="/Signup">here</a></p>
                         <Route exact path="/Search" component={Signup} />
                             </div>
                         </Router>
