@@ -4,6 +4,9 @@
 
 }
 
+.modal-open {
+  overflow: scroll;
+}
 
 /*# sourceMappingURL=Modal.css.map */
 
