@@ -26,8 +26,8 @@ class Fosters extends React.Component {
     this.loadCurrentFosters();
   };
 
-  deleteAnimal = animalID => {
-    API.deleteAnimal(animalID)
+  returnAnimal = animalID => {
+    API.returnAnimal({animalID, fosterStatus: "returned"})
     .then(API.getCurrentFosters()
     .then(res => {
       console.log("res.data from getCurrentFosters method: ", res.data);
@@ -52,8 +52,8 @@ class Fosters extends React.Component {
               animalThumbnailUrl={animal.animalThumbnailUrl}
             />
             <Button 
-              onClick={() => this.deleteAnimal(animal.animalID)}
-              buttonText="Delete"
+              onClick={() => this.returnAnimal(animal.animalID)}
+              buttonText="Return"
               animalID={animal.animalID}
             />
 
@@ -63,6 +63,7 @@ class Fosters extends React.Component {
               animalGeneralAge={animal.animalGeneralAge}
               animalSex={animal.animalSex}
               animalBreed={animal.animalBreed}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
             />
           </div>
 

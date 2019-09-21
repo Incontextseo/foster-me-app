@@ -68,6 +68,9 @@ class Search extends React.Component {
   render() {
     return (
       <div>
+        <div className="col-12 text-center">
+            <h1>SEARCH AVAILABLE ANIMALS</h1>
+        </div>
         <SearchForm
           handleInputChange={this.handleInputChange}
           handleSelectionChange={this.handleSelectionChange}
@@ -78,20 +81,21 @@ class Search extends React.Component {
         
         {this.state.animals.map(animal => (
           <div className="container" key={animal.value.animalID}>
-            <AnimalResult 
-              animalID={animal.value.animalID}
-              animalName={animal.value.animalName}
-              animalGeneralAge={animal.value.animalGeneralAge}
-              animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
-              animalDescriptionPlain={animal.value.animalDescriptionPlain}
-              animalThumbnailUrl={animal.value.animalThumbnailUrl}
-            />
-            <Button 
-              onClick={() => this.saveAnimal(animal.value.animalID)}
-              buttonText="Foster me"
-              animalID={animal.value.animalID}
-            />​
+              <AnimalResult 
+                animalID={animal.value.animalID}
+                animalName={animal.value.animalName}
+                animalGeneralAge={animal.value.animalGeneralAge}
+                animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
+                animalDescriptionPlain={animal.value.animalDescriptionPlain}
+                animalThumbnailUrl={animal.value.animalThumbnailUrl}
+              />
+              <Button 
+                onClick={() => this.saveAnimal(animal.value.animalID)}
+                buttonText="Foster me"
+                animalID={animal.value.animalID}
+              />​
           </div>
+
         ))}
       </div>
     );

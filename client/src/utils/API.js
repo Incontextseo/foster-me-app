@@ -34,6 +34,11 @@ export default {
         console.log("data to update: ", animalData);
         return axios.put("/api/animals/current/", animalData)
     },
+    // Post route to update foster info in database and set fosterStatus to Return
+    returnAnimal: animalData => {
+        console.log("data to update: ", animalData);
+        return axios.put("/api/animals/current/", animalData)
+    },
     
     // Get list foster families from database
     getFosters: () => {
