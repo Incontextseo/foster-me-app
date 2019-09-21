@@ -4,7 +4,7 @@ import "./UpdateForm.css";
 
 function UpdateForm(props) {
 
-    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, handleChange} = props;
+    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, animalDescriptionPlain, handleChange} = props;
 
     return (
         <div className="col-md-12">
@@ -28,6 +28,7 @@ function UpdateForm(props) {
                 </div>
 
                 <div className="col-md-12">
+                    <p>{animalDescriptionPlain}</p>
                     <h3>Update details about your foster</h3>
                     <div className="form-check form-check-inline">
                         <p>Is the animal house trained/litter box trained?</p>
@@ -60,7 +61,7 @@ function UpdateForm(props) {
                     <div className="form-group">
                         <p>Other interaction comments:</p>
                         <label htmlFor="interactionComments">Comments</label> <br />
-                        <input name="interactionComments" type="text" rows="3" className="form-check-input" onChange={handleChange} />
+                        <input name="interactionComments" type="text" rows="3" className="form-control" onChange={handleChange} />
                     </div>
 
                     <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
@@ -314,10 +315,10 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>Update animal description:</p>
+                        <p>Update animal profile:</p>
                         <div className="input-field col s12">
-                            <label htmlFor="animalDescriptionPlain">Help me get adopted!</label> <br />
-                            <input name="animalDescriptionPlain" type="text" rows="5" className="form-check-input" onChange={handleChange} />
+                            <label htmlFor="animalProfile">Help me get adopted!</label> <br />
+                            <input name="animalProfile" type="text" rows="5" className="form-control" onChange={handleChange} />
                         </div>
                     </div>
                     {/* <div className="form-group">

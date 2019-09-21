@@ -135,6 +135,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: ""
     },
+    animalProfile: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+
     // deletedAt: DataTypes.DATE
     },  
     // {
