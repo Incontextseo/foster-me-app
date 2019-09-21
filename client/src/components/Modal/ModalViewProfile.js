@@ -32,7 +32,8 @@ class ModalViewProfile extends Component {
           animalOKForSeniors: props.animalOKForSeniors,
           animalOKWithCats: props.animalOKWithCats,
           animalOKWithDogs: props.animalOKWithDogs,
-          animalDescriptionPlain: props.animalDescriptionPlain
+          animalDescriptionPlain: props.animalDescriptionPlain,
+          animalProfile: props.animalProfile
         };
         this.handleChange = this.handleChange.bind(this);
       }
@@ -111,8 +112,9 @@ render() {
               animalOKWithAdults= {this.props.animalOKWithAdults}
               animalOKForSeniors= {this.props.animalOKForSeniors}
               animalOKWithCats= {this.props.animalOKWithCats}
-              animalOKWithDogs= {this.props.animalBreedanimalOKWithDogs}
+              animalOKWithDogs= {this.props.animalOKWithDogs}
               animalDescriptionPlain= {this.props.animalDescriptionPlain}
+              animalProfile={this.props.animalProfile}
             />
         </MDBModalBody>
         <MDBModalFooter>

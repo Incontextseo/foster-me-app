@@ -189,6 +189,16 @@ router.route("/past")
         .then(function(dbAnimal) {
             res.json(dbAnimal);
         });
+    })
+    .delete(function(req, res) {
+        db.Animal.destroy({
+            where: {
+                animalID: req.body.animalID
+            }
+        })
+        .then(function(dbAnimal) {
+            res.json(dbAnimal);
+        });
     });
 
     // routes match /api/animals/:animalID

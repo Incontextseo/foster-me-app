@@ -28,7 +28,7 @@ class History extends React.Component {
     API.deleteAnimal(animalID)
     .then(API.getPastFosters()
     .then(res => {
-      console.log("res.data from getCurrentFosters method: ", res.data);
+      console.log("res.data from getPastFosters method: ", res.data);
       this.setState({animals: res.data})
     })
     )
@@ -55,12 +55,29 @@ class History extends React.Component {
               animalID={animal.animalID}
             />
             <ModalViewProfile
-              animalID={animal.animalID}
-              animalName={animal.animalName}
-              animalGeneralAge={animal.animalGeneralAge}
-              animalSex={animal.animalSex}
-              animalBreed={animal.animalBreed}
-              animalDescriptionPlain={animal.animalDescriptionPlain}
+              animalID = {animal.animalID}
+              animalName = {animal.animalName} 
+              animalSpecies = {animal.animalSpecies} 
+              animalGeneralAge= {animal.animalGeneralAge} 
+              animalSex= {animal.animalSex}
+              animalBreed= {animal.animalBreed}
+              fosterReason= {animal.fosterReason}
+              animalHouseTrained= {animal.animalHouseTrained}
+              interactWithChildren= {animal.interactWithChildren}
+              interactWithPets= {animal.interactWithPets}
+              interactionComments= {animal.interactionComments}
+              initialReaction= {animal.initialReaction}
+              greetingReaction= {animal.greetingReaction}
+              pettingReaction= {animal.pettingReaction}
+              playReaction= {animal.playReaction}
+              holdingReaction= {animal.holdingReaction}
+              animalOKWithKids= {animal.animalOKWithKids}
+              animalOKWithAdults= {animal.animalOKWithAdults}
+              animalOKForSeniors= {animal.animalOKForSeniors}
+              animalOKWithCats= {animal.animalOKWithCats}
+              animalOKWithDogs= {animal.animalOKWithDogs}
+              animalDescriptionPlain= {animal.animalDescriptionPlain}
+              animalProfile={animal.animalProfile}
             />
           </div>
 
