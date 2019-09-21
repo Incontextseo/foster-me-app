@@ -27,8 +27,7 @@ class ModalUpdateForm extends Component {
           animalOKForSeniors: "",
           animalOKWithCats: "",
           animalOKWithDogs: "",
-          animalDescriptionPlain: "",
-          fosterStatus: ""
+          animalDescriptionPlain: ""
         };
         this.handleChange = this.handleChange.bind(this);
       }
@@ -65,8 +64,6 @@ handleSubmit = event => {
       animalOKWithCats: this.state.animalOKWithCats,
       animalOKWithDogs: this.state.animalOKWithDogs,
       animalDescriptionPlain: this.state.animalDescriptionPlain,
-      fosterStatus: this.state.fosterStatus
-
     })
     .then(this.toggle)
     .then(

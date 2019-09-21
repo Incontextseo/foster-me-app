@@ -1,7 +1,9 @@
 import React from 'react';
 import './History.css';
 import AnimalResult from "../../components/AnimalResult";
-import API from '../../utils/API';
+import Button from "../../components/Button";
+import ModalViewProfile from "../../components/Modal/ModalViewProfile";
+import API from "../../utils/API";
 
 class History extends React.Component {
   state = {
@@ -22,6 +24,17 @@ class History extends React.Component {
     this.loadPastFosters();
   };
 
+  deleteAnimal = animalID => {
+    API.deleteAnimal(animalID)
+    .then(API.getPastFosters()
+    .then(res => {
+      console.log("res.data from getCurrentFosters method: ", res.data);
+      this.setState({animals: res.data})
+    })
+    )
+    .catch(err => console.log(err))
+  };
+
   render() {
     return (
       <div>
@@ -36,7 +49,19 @@ class History extends React.Component {
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
             />
-
+            <Button 
+              onClick={() => this.deleteAnimal(animal.animalID)}
+              buttonText="Delete"
+              animalID={animal.animalID}
+            />
+            <ModalViewProfile
+              animalID={animal.animalID}
+              animalName={animal.animalName}
+              animalGeneralAge={animal.animalGeneralAge}
+              animalSex={animal.animalSex}
+              animalBreed={animal.animalBreed}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
+            />
           </div>
 
         ))}

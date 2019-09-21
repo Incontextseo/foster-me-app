@@ -5,7 +5,7 @@ import './Fosters.css'
 import AnimalResult from "../../components/AnimalResult";
 import ModalUpdateForm from "../../components/Modal/ModalUpdateForm";
 import Button from "../../components/Button";
-import ImageUploadForm from "../../components/ImageUploadForm";
+// import ImageUploadForm from "../../components/ImageUploadForm";
 import API from '../../utils/API';
 
 class Fosters extends React.Component {
@@ -27,8 +27,8 @@ class Fosters extends React.Component {
     this.loadCurrentFosters();
   };
 
-  deleteAnimal = animalID => {
-    API.deleteAnimal(animalID)
+  returnAnimal = animalID => {
+    API.returnAnimal({animalID, fosterStatus: "returned"})
     .then(API.getCurrentFosters()
     .then(res => {
       console.log("res.data from getCurrentFosters method: ", res.data);
@@ -53,18 +53,17 @@ class Fosters extends React.Component {
               animalThumbnailUrl={animal.animalThumbnailUrl}
             />
             <Button 
-              onClick={() => this.deleteAnimal(animal.animalID)}
-              buttonText="Delete"
+              onClick={() => this.returnAnimal(animal.animalID)}
+              buttonText="Return"
               animalID={animal.animalID}
             />
-            <ImageUploadForm />
-
-            <ModalUpdateForm 
+            <ModalUpdateForm
               animalID={animal.animalID}
               animalName={animal.animalName}
               animalGeneralAge={animal.animalGeneralAge}
               animalSex={animal.animalSex}
               animalBreed={animal.animalBreed}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
             />
           </div>
 
@@ -73,14 +72,5 @@ class Fosters extends React.Component {
     )
   }
 };
-
-// function Fosters() {
-//   return (
-//     <div>
-//         Hello World! - View Your Current Fosters!
-//         <Animals />
-//     </div>
-//   );
-// }
 
 export default Fosters

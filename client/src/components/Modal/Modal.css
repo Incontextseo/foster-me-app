@@ -1,7 +1,13 @@
 .modal__container {
 
   background-color: #1E1D40;
+
 }
+
+.modal-open {
+  overflow: scroll;
+}
+
 /*# sourceMappingURL=Modal.css.map */
 
 .modal-open {

@@ -3,6 +3,7 @@ import SearchForm from "../../components/SearchForm";
 import AnimalResult from "../../components/AnimalResult";
 import Button from "../../components/Button";
 import API from "../../utils/API";
+import ModalViewProfile from "../../components/Modal/ModalViewProfile";
 
 class Search extends React.Component {
   state = {
@@ -68,6 +69,9 @@ class Search extends React.Component {
   render() {
     return (
       <div>
+        <div className="col-12 text-center">
+            <h1>SEARCH AVAILABLE ANIMALS</h1>
+        </div>
         <SearchForm
           handleInputChange={this.handleInputChange}
           handleSelectionChange={this.handleSelectionChange}
@@ -78,20 +82,29 @@ class Search extends React.Component {
         
         {this.state.animals.map(animal => (
           <div className="container" key={animal.value.animalID}>
-            <AnimalResult 
-              animalID={animal.value.animalID}
-              animalName={animal.value.animalName}
-              animalGeneralAge={animal.value.animalGeneralAge}
-              animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
-              animalDescriptionPlain={animal.value.animalDescriptionPlain}
-              animalThumbnailUrl={animal.value.animalThumbnailUrl}
-            />
-            <Button 
-              onClick={() => this.saveAnimal(animal.value.animalID)}
-              buttonText="Foster me"
-              animalID={animal.value.animalID}
-            />​
+              <AnimalResult 
+                animalID={animal.value.animalID}
+                animalName={animal.value.animalName}
+                animalGeneralAge={animal.value.animalGeneralAge}
+                animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
+                animalDescriptionPlain={animal.value.animalDescriptionPlain}
+                animalThumbnailUrl={animal.value.animalThumbnailUrl}
+              />
+              <Button 
+                onClick={() => this.saveAnimal(animal.value.animalID)}
+                buttonText="Foster me"
+                animalID={animal.value.animalID}
+              />​
+              <ModalViewProfile
+                animalID={animal.value.animalID}
+                animalName={animal.value.animalName}
+                animalGeneralAge={animal.value.animalGeneralAge}
+                animalSex={animal.value.animalSex}
+                animalBreed={animal.value.animalBreed}
+                animalDescriptionPlain={animal.value.animalDescriptionPlain}
+              />
           </div>
+
         ))}
       </div>
     );
