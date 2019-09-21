@@ -3,6 +3,7 @@ import SearchForm from "../../components/SearchForm";
 import AnimalResult from "../../components/AnimalResult";
 import Button from "../../components/Button";
 import API from "../../utils/API";
+import ModalViewProfile from "../../components/Modal/ModalViewProfile";
 
 class Search extends React.Component {
   state = {
@@ -94,6 +95,14 @@ class Search extends React.Component {
                 buttonText="Foster me"
                 animalID={animal.value.animalID}
               />​
+              <ModalViewProfile
+                animalID={animal.animalID}
+                animalName={animal.animalName}
+                animalGeneralAge={animal.animalGeneralAge}
+                animalSex={animal.animalSex}
+                animalBreed={animal.animalBreed}
+                animalDescriptionPlain={animal.animalDescriptionPlain}
+              />
           </div>
 
         ))}

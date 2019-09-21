@@ -56,7 +56,6 @@ class Fosters extends React.Component {
               buttonText="Return"
               animalID={animal.animalID}
             />
-
             <ModalUpdateForm
               animalID={animal.animalID}
               animalName={animal.animalName}

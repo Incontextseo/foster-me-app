@@ -2,6 +2,7 @@ import React from 'react';
 import './History.css';
 import AnimalResult from "../../components/AnimalResult";
 import Button from "../../components/Button";
+import ModalViewProfile from "../../components/Modal/ModalViewProfile";
 import API from "../../utils/API";
 
 class History extends React.Component {
@@ -52,6 +53,14 @@ class History extends React.Component {
               onClick={() => this.deleteAnimal(animal.animalID)}
               buttonText="Delete"
               animalID={animal.animalID}
+            />
+            <ModalViewProfile
+              animalID={animal.animalID}
+              animalName={animal.animalName}
+              animalGeneralAge={animal.animalGeneralAge}
+              animalSex={animal.animalSex}
+              animalBreed={animal.animalBreed}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
             />
           </div>
 
