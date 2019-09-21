@@ -1,28 +1,52 @@
-import React, { Component } from 'react';
-//import { BrowserRouter } from 'react-router-dom';
-import { MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
+import React, { Component } from "react";
+import {
+MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline} from "mdbreact";
+import { BrowserRouter as Router } from 'react-router-dom';
+import Logo from './../../Styles/Images/logo-naked.png';
+import "./Nav.css";
 
 class Nav extends Component {
-  componentWillUnmount() {
-      window.clearTimeout(this.timeout)
+  state = {
+    isOpen: false
+  };
+
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen });
   }
+
   render() {
       return (
- 
-        <MDBNav pills color="unique">
-          <MDBNavItem>
-            <MDBNavLink active to="/">Home</MDBNavLink>
-          </MDBNavItem>
-          <MDBNavItem>
-            <MDBNavLink to="/search">Search</MDBNavLink>
-          </MDBNavItem>
-          <MDBNavItem>
-            <MDBNavLink to="/fosters">My Fosters</MDBNavLink>
-          </MDBNavItem>
-          <MDBNavItem>
-            <MDBNavLink to="/history">My Past Fosters</MDBNavLink>
-          </MDBNavItem>
-        </MDBNav>
+
+        <Router>
+          <MDBNavbar color="indigo" dark expand="md">
+          <MDBNavbarBrand>
+          <img src={Logo} className="nav__logo"/>
+        </MDBNavbarBrand>
+
+
+        <MDBNavbarToggler onClick={this.toggleCollapse} />
+        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+          <MDBNavbarNav left>
+            <MDBNavItem active>
+              <MDBNavLink to="/">Home</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="#!">Features</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="#!">Pricing</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="#!">Pricing</MDBNavLink>
+            </MDBNavItem>
+            </MDBNavbarNav>
+            <MDBNavbarNav right>
+
+          </MDBNavbarNav>
+        </MDBCollapse>
+
+          </MDBNavbar>
+        </Router>
 
 
       )
