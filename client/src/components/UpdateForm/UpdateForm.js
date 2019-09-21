@@ -65,7 +65,7 @@ function UpdateForm(props) {
 
                     <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
                     <div className="form-group">
-                        <p>When you first brought the animal home he/she:</p>
+                        <p>When you first brought the animal home they (please mark all that apply):</p>
                         <p>
                             <label htmlFor="initialReaction">
                                 <input type="checkbox" name="initialReaction" className="form-check-input" value="Explored the environment with a tall body posture." onChange={handleChange} />
@@ -92,7 +92,7 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>When greeting or approaching the animal they:</p>
+                        <p>When greeting or approaching the animal they (please mark all that apply):</p>
                         <p>
                             <label htmlFor="greetingReaction">
                             <input type="checkbox" name="greetingReaction" className="form-check-input" value="Does not approach." onChange={handleChange} />
@@ -131,7 +131,7 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>When petting the animal he/she (please mark all that apply):</p>
+                        <p>When petting the animal they (please mark all that apply):</p>
                         <p>
                             <label htmlFor="pettingReaction">
                                 <input type="checkbox" name="pettingReaction" className="form-check-input" value="Rubs against legs or hand." onChange={handleChange} />
@@ -222,7 +222,7 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>When picked up and held he/she (please mark all that apply):</p>
+                        <p>When picked up and held they (please mark all that apply):</p>
                         <p>
                             <label htmlFor="holdingReaction">
                                 <input type="checkbox" name="holdingReaction" className="form-check-input" value="Meows, purrs, or licks when held." onChange={handleChange} />
