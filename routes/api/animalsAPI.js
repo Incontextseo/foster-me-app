@@ -78,6 +78,8 @@ router.route("/search")
     .post(function(req, res) {
         data.search.filters[0].criteria = req.body.animalType;
         data.search.filters[1].criteria = req.body.searchZip;
+        // data.search.filters[3].criteria = "Yes";
+        // data.search.filters[4].criteria = "Available";
         axios.post('https://api.rescuegroups.org/http/v2.json', data, {
         headers: headers
         })
@@ -111,6 +113,7 @@ router.route("/")
             animalHouseTrained: req.body.animalHouseTrained,
             animalDeclawed: req.body.animalDeclawed,
             animalThumbnailUrl: req.body.animalThumbnailUrl,
+            urlSecureFullsize: req.body.urlSecureFullsize,
             createdAt: new Date()
         })
         .then(function(dbAnimal) {

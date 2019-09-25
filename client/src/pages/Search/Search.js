@@ -52,11 +52,13 @@ class Search extends React.Component {
       animalGeneralSizePotential: animal.value.animalGeneralSizePotential,
       animalDescriptionPlain: animal.value.animalDescriptionPlain,
       animalThumbnailUrl: animal.value.animalThumbnailUrl,
+      urlSecureFullsize: animal.value.animalPictures[0].urlSecureFullsize,
       animalHouseTrained: animal.value.animalHouseTrained,
       animalDeclawed: animal.value.animalDeclawed,
       animalSpecies: this.state.animalType,
       animalLocation: animal.value.animalLocation,
       animalSex: animal.value.animalSex,
+      animalBreed: animal.value.animalBreed,
       fosterStatus: "current",
     }).then(() => {
       this.setState({
@@ -80,32 +82,50 @@ class Search extends React.Component {
           animalType={this.animalType}
         />
         
-        {this.state.animals.map(animal => (
-          <div className="container" key={animal.value.animalID}>
-              <AnimalResult 
-                animalID={animal.value.animalID}
-                animalName={animal.value.animalName}
-                animalGeneralAge={animal.value.animalGeneralAge}
-                animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
-                animalDescriptionPlain={animal.value.animalDescriptionPlain}
-                animalThumbnailUrl={animal.value.animalThumbnailUrl}
-              />
-              <Button 
-                onClick={() => this.saveAnimal(animal.value.animalID)}
-                buttonText="Foster me"
-                animalID={animal.value.animalID}
-              />​
-              <ModalViewProfile
-                animalID={animal.value.animalID}
-                animalName={animal.value.animalName}
-                animalGeneralAge={animal.value.animalGeneralAge}
-                animalSex={animal.value.animalSex}
-                animalBreed={animal.value.animalBreed}
-                animalDescriptionPlain={animal.value.animalDescriptionPlain}
-              />
-          </div>
-
-        ))}
+        {this.state.animals.map(animal => {
+          let urlSecureFullsize;
+          if (animal.value.animalPictures[0]) {
+            urlSecureFullsize = animal.value.animalPictures[0].urlSecureFullsize;
+          }
+           else {
+            urlSecureFullsize = animal.value.animalThumbnailUrl;
+           } 
+          return (
+            <div className="container" key={animal.value.animalID}>
+                <AnimalResult 
+                  animalID={animal.value.animalID}
+                  animalName={animal.value.animalName}
+                  animalGeneralAge={animal.value.animalGeneralAge}
+                  animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
+                  animalDescriptionPlain={animal.value.animalDescriptionPlain}
+                  animalThumbnailUrl={animal.value.animalThumbnailUrl}
+                  animalBreed={animal.value.animalBreed}
+                  urlSecureFullsize={urlSecureFullsize}
+                />
+                <Button 
+                  onClick={() => this.saveAnimal(animal.value.animalID)}
+                  buttonText="Foster me"
+                  animalID={animal.value.animalID}
+                />​
+                <ModalViewProfile
+                  animalID={animal.value.animalID}
+                  animalName={animal.value.animalName}
+                  animalGeneralAge={animal.value.animalGeneralAge}
+                  animalGeneralSizePotential={animal.animalGeneralSizePotential}
+                  animalSpecies={animal.animalSpecies}
+                  animalSex={animal.value.animalSex}
+                  animalBreed={animal.value.animalBreed}
+                  animalDescriptionPlain={animal.value.animalDescriptionPlain}
+                  animalHouseTrained={animal.animalHouseTrained}
+                  animalDeclawed={animal.animalDeclawed}
+                />
+            </div>
+  
+          )
+        }
+        )
+        
+        }
       </div>
     );
   };

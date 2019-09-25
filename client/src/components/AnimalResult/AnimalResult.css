@@ -14,6 +14,10 @@ ul.navList {
     animation-iteration-count: 1;
 }
 
+.news-img {
+    max-width: 100%;
+}
+
 @keyframes growCorrect {
     0% {transform: scale(1); color: white; }
     25% {transform: scale(1.5) }

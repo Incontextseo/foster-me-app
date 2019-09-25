@@ -48,6 +48,8 @@ class History extends React.Component {
               animalGeneralSizePotential={animal.animalGeneralSizePotential}
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
+              animalBreed={animal.animalBreed}
+              urlSecureFullsize={animal.urlSecureFullsize}
             />
             <Button 
               onClick={() => this.deleteAnimal(animal.animalID)}
