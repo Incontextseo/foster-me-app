@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import './Styles/App.css';
 import Home from './pages/Home/Home';
 import Search from './pages/Search';
@@ -8,7 +8,7 @@ import Fosters from './pages/Fosters';
 import History from './pages/History';
 import NoMatch from "./pages/NoMatch";
 import Nav from './components/Nav';
-// import Header from './components/Header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Signup from './pages/Signup/Signup';
 
