@@ -60,6 +60,11 @@ module.exports = function(sequelize, DataTypes) {
         isUrl: true
       }
     },
+    urlSecureFullsize: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      defaultValue: ""
+    },
     fosterStatus: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -73,12 +78,12 @@ module.exports = function(sequelize, DataTypes) {
     interactWithChildren: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     interactWithPets: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     interactionComments: {
       type: DataTypes.TEXT,

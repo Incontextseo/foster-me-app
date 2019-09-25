@@ -52,11 +52,13 @@ class Search extends React.Component {
       animalGeneralSizePotential: animal.value.animalGeneralSizePotential,
       animalDescriptionPlain: animal.value.animalDescriptionPlain,
       animalThumbnailUrl: animal.value.animalThumbnailUrl,
+      urlSecureFullsize: animal.value.animalPictures[0].urlSecureFullsize,
       animalHouseTrained: animal.value.animalHouseTrained,
       animalDeclawed: animal.value.animalDeclawed,
       animalSpecies: this.state.animalType,
       animalLocation: animal.value.animalLocation,
       animalSex: animal.value.animalSex,
+      animalBreed: animal.value.animalBreed,
       fosterStatus: "current",
     }).then(() => {
       this.setState({

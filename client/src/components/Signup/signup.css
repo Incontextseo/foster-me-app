@@ -1,9 +1,3 @@
-ul.navList {
-    display: flex;
-    justify-content: space-around;
-    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
-}
-
 .correct {
     animation: growCorrect 0.5s;
     animation-iteration-count: 1;
@@ -12,10 +6,6 @@ ul.navList {
 .incorrect {
     animation: growIncorrect 0.5s;
     animation-iteration-count: 1;
-}
-
-.news-img {
-    max-width: 100%;
 }
 
 @keyframes growCorrect {
