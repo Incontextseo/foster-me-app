@@ -13,7 +13,7 @@ class ModalUpdateForm extends Component {
           animals: [],
           animalID: props.animalID,
           fosterReason: "",
-          animalHouseTrained: "",
+          animalHouseTrained: props.animalHouseTrained,
           interactWithChildren: "",
           interactWithPets: "",
           interactionComments: "",
@@ -22,12 +22,12 @@ class ModalUpdateForm extends Component {
           pettingReaction: "",
           playReaction: "",
           holdingReaction: "",
-          animalOKWithKids: "",
-          animalOKWithAdults: "",
-          animalOKForSeniors: "",
-          animalOKWithCats: "",
-          animalOKWithDogs: "",
-          animalDescriptionPlain: ""
+          animalOKWithKids: props.animalOKWithKids,
+          animalOKWithAdults: props.animalOKWithAdults,
+          animalOKForSeniors: props.animalOKForSeniors,
+          animalOKWithCats: props.animalOKWithCats,
+          animalOKWithDogs: props.animalOKWithDogs,
+          animalDescriptionPlain: props.animalDescriptionPlain
         };
         this.handleChange = this.handleChange.bind(this);
       }
@@ -63,7 +63,8 @@ handleSubmit = event => {
       animalOKForSeniors: this.state.animalOKForSeniors,
       animalOKWithCats: this.state.animalOKWithCats,
       animalOKWithDogs: this.state.animalOKWithDogs,
-      animalDescriptionPlain: this.state.animalDescriptionPlain,
+      // animalDescriptionPlain: this.state.animalDescriptionPlain,
+      animalProfile: this.state.animalProfile
     })
     .then(this.toggle)
     .then(
@@ -93,6 +94,7 @@ render() {
                 animalGeneralAge={this.props.animalGeneralAge}
                 animalSex={this.props.animalSex}
                 animalBreed={this.props.animalBreed}
+                animalDescriptionPlain={this.props.animalDescriptionPlain}
             />
         </MDBModalBody>
         <MDBModalFooter>
