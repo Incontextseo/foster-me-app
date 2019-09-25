@@ -14,14 +14,14 @@ class ModalUpdateForm extends Component {
           animalID: props.animalID,
           fosterReason: props.fosterReason,
           animalHouseTrained: props.animalHouseTrained,
-          interactWithChildren: "",
-          interactWithPets: "",
+          interactWithChildren: props.interactWithChildren,
+          interactWithPets: props.interactWithPets,
           interactionComments: props.interactionComments,
-          initialReaction: "",
-          greetingReaction: "",
-          pettingReaction: "",
-          playReaction: "",
-          holdingReaction: "",
+          initialReaction: props.initialReaction,
+          greetingReaction: props.greetingReaction,
+          pettingReaction: props.pettingReaction,
+          playReaction: props.playReaction,
+          holdingReaction: props.holdingReaction,
           animalOKWithKids: props.animalOKWithKids,
           animalOKWithAdults: props.animalOKWithAdults,
           animalOKForSeniors: props.animalOKForSeniors,
@@ -30,7 +30,9 @@ class ModalUpdateForm extends Component {
           animalDescriptionPlain: props.animalDescriptionPlain
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleOptionChange = this.handleOptionChange.bind(this);
       }
+
 
 toggle = () => {
   this.setState({
@@ -41,6 +43,11 @@ toggle = () => {
 handleChange = event => {
   console.log("handleChange")
     this.setState({[event.target.name]: event.target.value});
+  };
+
+handleOptionChange = event => {
+  console.log("handleOptionChange")
+    this.setState({[event.target.name]: event.target.checked});
   };
 
 handleSubmit = event => {
@@ -89,6 +96,7 @@ render() {
         <MDBModalBody>
             <UpdateForm 
                 handleChange={this.handleChange}
+                handleOptionChange={this.handleOptionChange}
                 animalID={this.props.animalID}
                 animalName={this.props.animalName}
                 fosterReason={this.props.fosterReason}
@@ -97,6 +105,10 @@ render() {
                 animalBreed={this.props.animalBreed}
                 interactionComments={this.props.interactionComments}
                 animalDescriptionPlain={this.props.animalDescriptionPlain}
+                animalHouseTrained= {this.props.animalHouseTrained}
+                interactWithChildren= {this.props.interactWithChildren}
+                interactWithPets= {this.props.interactWithPets}
+                animalProfile= {this.props.animalProfile}
             />
         </MDBModalBody>
         <MDBModalFooter>

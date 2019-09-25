@@ -70,9 +70,9 @@ class Fosters extends React.Component {
                   animalBreed={animal.animalBreed}
                   animalDescriptionPlain={animal.animalDescriptionPlain}
                   animalHouseTrained= {animal.animalHouseTrained}
-                  interactionComments={animal.interactionComments}
                   interactWithChildren= {animal.interactWithChildren}
                   interactWithPets= {animal.interactWithPets}
+                  interactionComments={animal.interactionComments}
                   animalProfile={animal.animalProfile}
                 />
           </div>
