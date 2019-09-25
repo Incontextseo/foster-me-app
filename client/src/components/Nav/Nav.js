@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
 MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
-import Logo from './../../Styles/Images/logo-naked.png';
+// import Logo from './../../Styles/Images/logo-naked.png';
 import "./Nav.css";
 
 class Nav extends Component {
@@ -20,7 +20,7 @@ class Nav extends Component {
         <Router>
           <MDBNavbar color="indigo" dark expand="md">
           <MDBNavbarBrand>
-          <img src={Logo} className="nav__logo" alt=""/>
+          <img src="" className="nav__logo" alt=""/>
         </MDBNavbarBrand>
 
 
@@ -31,13 +31,13 @@ class Nav extends Component {
               <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Features</MDBNavLink>
+              <MDBNavLink to="/search">Search</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
+              <MDBNavLink to="/fosters">Current Fosters</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
+              <MDBNavLink to="/history">Past Fosters</MDBNavLink>
             </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>

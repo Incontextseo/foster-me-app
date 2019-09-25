@@ -1,10 +1,10 @@
 import React from "react";
 import './AnimalResult.css';
+import Pawprint from "./pawprint.png";
 
 
 function AnimalResult(props) {
-    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, animalGeneralSizePotential, animalBreed, animalDescriptionPlain, fosterReason, updatedAt} = props;
-
+    const { animalID, animalName, animalGeneralAge, animalThumbnailUrl, urlSecureFullsize, animalGeneralSizePotential, animalBreed, animalDescriptionPlain, fosterReason, updatedAt} = props;
     return (
 
         // <article id={animalID}>
@@ -19,7 +19,7 @@ function AnimalResult(props) {
         <article id={animalID}>
             <div className="row">
                 <div className="img-area col-4">
-                    <img className="news-img" src={animalThumbnailUrl} alt={animalName}/>
+                    <img className="news-img" src={urlSecureFullsize || animalThumbnailUrl || Pawprint } alt={animalName} />
                     <h3>{animalName}</h3>
                     <p>
                     Age: {animalGeneralAge || "Age unknown"}<br/>

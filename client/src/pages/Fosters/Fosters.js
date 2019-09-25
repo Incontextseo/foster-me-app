@@ -51,6 +51,8 @@ class Fosters extends React.Component {
               animalGeneralSizePotential={animal.animalGeneralSizePotential}
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
+              animalBreed={animal.animalBreed}
+              urlSecureFullsize={animal.urlSecureFullsize}
             />
             <Button 
               onClick={() => this.returnAnimal(animal.animalID)}
@@ -61,9 +63,15 @@ class Fosters extends React.Component {
               animalID={animal.animalID}
               animalName={animal.animalName}
               animalGeneralAge={animal.animalGeneralAge}
+              fosterReason={animal.fosterReason}
               animalSex={animal.animalSex}
               animalBreed={animal.animalBreed}
               animalDescriptionPlain={animal.animalDescriptionPlain}
+              animalHouseTrained= {animal.animalHouseTrained}
+              interactWithChildren= {animal.interactWithChildren}
+              interactWithPets= {animal.interactWithPets}
+              interactionComments={animal.interactionComments}
+              animalProfile={animal.animalProfile}
             />
           </div>
 

@@ -12,25 +12,27 @@ class ModalUpdateForm extends Component {
           modal: false,
           animals: [],
           animalID: props.animalID,
-          fosterReason: "",
-          animalHouseTrained: "",
-          interactWithChildren: "",
-          interactWithPets: "",
-          interactionComments: "",
-          initialReaction: "",
-          greetingReaction: "",
-          pettingReaction: "",
-          playReaction: "",
-          holdingReaction: "",
-          animalOKWithKids: "",
-          animalOKWithAdults: "",
-          animalOKForSeniors: "",
-          animalOKWithCats: "",
-          animalOKWithDogs: "",
-          animalDescriptionPlain: ""
+          fosterReason: props.fosterReason,
+          animalHouseTrained: props.animalHouseTrained,
+          interactWithChildren: props.interactWithChildren,
+          interactWithPets: props.interactWithPets,
+          interactionComments: props.interactionComments,
+          initialReaction: props.initialReaction,
+          greetingReaction: props.greetingReaction,
+          pettingReaction: props.pettingReaction,
+          playReaction: props.playReaction,
+          holdingReaction: props.holdingReaction,
+          animalOKWithKids: props.animalOKWithKids,
+          animalOKWithAdults: props.animalOKWithAdults,
+          animalOKForSeniors: props.animalOKForSeniors,
+          animalOKWithCats: props.animalOKWithCats,
+          animalOKWithDogs: props.animalOKWithDogs,
+          animalDescriptionPlain: props.animalDescriptionPlain
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleOptionChange = this.handleOptionChange.bind(this);
       }
+
 
 toggle = () => {
   this.setState({
@@ -41,6 +43,11 @@ toggle = () => {
 handleChange = event => {
   console.log("handleChange")
     this.setState({[event.target.name]: event.target.value});
+  };
+
+handleOptionChange = event => {
+  console.log("handleOptionChange")
+    this.setState({[event.target.name]: event.target.checked});
   };
 
 handleSubmit = event => {
@@ -63,7 +70,8 @@ handleSubmit = event => {
       animalOKForSeniors: this.state.animalOKForSeniors,
       animalOKWithCats: this.state.animalOKWithCats,
       animalOKWithDogs: this.state.animalOKWithDogs,
-      animalDescriptionPlain: this.state.animalDescriptionPlain,
+      // animalDescriptionPlain: this.state.animalDescriptionPlain,
+      animalProfile: this.state.animalProfile
     })
     .then(this.toggle)
     .then(
@@ -88,11 +96,19 @@ render() {
         <MDBModalBody>
             <UpdateForm 
                 handleChange={this.handleChange}
+                handleOptionChange={this.handleOptionChange}
                 animalID={this.props.animalID}
                 animalName={this.props.animalName}
+                fosterReason={this.props.fosterReason}
                 animalGeneralAge={this.props.animalGeneralAge}
                 animalSex={this.props.animalSex}
                 animalBreed={this.props.animalBreed}
+                interactionComments={this.props.interactionComments}
+                animalDescriptionPlain={this.props.animalDescriptionPlain}
+                animalHouseTrained= {this.props.animalHouseTrained}
+                interactWithChildren= {this.props.interactWithChildren}
+                interactWithPets= {this.props.interactWithPets}
+                animalProfile= {this.props.animalProfile}
             />
         </MDBModalBody>
         <MDBModalFooter>

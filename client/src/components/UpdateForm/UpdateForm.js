@@ -1,66 +1,96 @@
 import React from "react";
 import "./UpdateForm.css";
-// import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 function UpdateForm(props) {
 
-    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, handleChange} = props;
+    const { 
+        animalID, 
+        animalName, 
+        animalSpecies, 
+        animalGeneralAge, 
+        animalSex, 
+        animalBreed, 
+        animalDescriptionPlain, 
+        fosterReason,
+        animalHouseTrained,
+        interactWithChildren,
+        interactWithPets,
+        interactionComments,
+        initialReaction,
+        // greetingReaction,
+        // pettingReaction,
+        // playReaction,
+        // holdingReaction,
+        // animalOKWithKids,
+        // animalOKWithAdults,
+        // animalOKForSeniors,
+        // animalOKWithCats,
+        // animalOKWithDogs,
+        animalProfile,
+        handleChange} = props;
 
     return (
-        <div className="col-md-12">
+        <div className="container">
             <form>
                 <h3>Foster info</h3>
-                <div className="col-sm-12 col-md-6">
-                    <p>Name: {animalName}</p>
-                    <p>Species: {animalSpecies}</p>
-                    <p>Age: {animalGeneralAge}</p>
-                    <div>
-                        Foster Reason:
-                        <div className="form-group">
-                            <input name="fosterReason" type="text" onChange={handleChange} />
-                        </div>
+                <div className="row">
+                    <div className="column col-6">
+                        <p>Name: {animalName}</p>
+                        <p>Species: {animalSpecies}</p>
+                        <p>Age: {animalGeneralAge}</p>
+                    </div>
+                    <div className="column col-6">
+                        <p>Animal ID: {animalID}</p>
+                        <p>Gender: {animalSex}</p>
+                        <p>Breed: {animalBreed}</p>
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-6">
-                    <p>Animal ID: {animalID}</p>
-                    <p>Gender: {animalSex}</p>
-                    <p>Breed: {animalBreed}</p>
+                <div className="row">
+                    Foster Reason:
+                    <div className="form-group">
+                        <input name="fosterReason" defaultValue={fosterReason} type="text" onChange={handleChange} />
+                    </div>
                 </div>
 
-                <div className="col-md-12">
-                    <h3>Update details about your foster</h3>
-                    <div className="form-check form-check-inline">
-                        <p>Is the animal house trained/litter box trained?</p>
-                        <br/>
+                <div className="row">
+                    <p>{animalDescriptionPlain}</p>
+                </div>
+                <h3>Update details about your foster</h3>
+                <div className="row form-check form-check-inline">
+                    <div className="column col-8">
+                        Is the animal house trained/litter box trained?
+                    </div>
+                    <div className="column col-4">
                         <label className="form-check-label">Yes</label>
-                        <input name="animalHouseTrained" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
-
+                        <input name="animalHouseTrained" type="radio" className="form-check-input" defaultChecked={animalHouseTrained === 'Yes'} value="Yes" onChange={handleChange} />
                         <label className="form-check-label">No</label>
-                        <input name="animalHouseTrained" type="radio" className="form-check-input" value="No" onChange={handleChange} />
-                    </div>
-                    <div className="form-check form-check-inline">
+                        <input name="animalHouseTrained" type="radio" className="form-check-input" defaultChecked={animalHouseTrained === 'No'} value="No" onChange={handleChange} />
+                    </div>                    
+                </div>
+                <div className="row form-check form-check-inline">
+                    <div className="column col-8">
                         <p>Has the animal interacted with children?</p>
-                        <br/> 
-                        <label className="form-check-label">Yes</label>
-                        <input name="interactWithChildren" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
-
-                        <label className="form-check-label">No</label>
-                        <input name="interactWithChildren" type="radio" className="form-check-input" value="No" onChange={handleChange} />
                     </div>
+                    <div className="column col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="interactWithChildren" type="radio" className="form-check-input" defaultChecked={interactWithChildren === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="interactWithChildren" type="radio" className="form-check-input" value="No" defaultChecked={interactWithChildren === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
                     <div className="form-check form-check-inline">
                         <p>Has the animal interacted with other pets?</p>
-                        <br/>
                         <label className="form-check-label">Yes</label>
-                        <input name="interactWithPets" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
+                        <input name="interactWithPets" type="radio" className="form-check-input" value="Yes" defaultChecked={interactWithPets === 'Yes'} onChange={handleChange} />
 
                         <label className="form-check-label">No</label>
-                        <input name="interactWithPets" type="radio" className="form-check-input" value="No" onChange={handleChange} />
+                        <input name="interactWithPets" type="radio" className="form-check-input" value="No" defaultChecked={interactWithPets === 'No'} onChange={handleChange} />
                     </div>
-
-                    <div className="form-group">
-                        <p>Other interaction comments:</p>
-                        <label htmlFor="interactionComments">Comments</label> <br />
-                        <input name="interactionComments" type="text" rows="3" className="form-check-input" onChange={handleChange} />
+                    <div>
+                        Other Interaction Comments:
+                        <div className="form-group">
+                            <input name="interactionComments" defaultValue={interactionComments} type="text" rows="3" onChange={handleChange} />
+                        </div>
                     </div>
 
                     <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
@@ -68,25 +98,25 @@ function UpdateForm(props) {
                         <p>When you first brought the animal home they (please mark all that apply):</p>
                         <p>
                             <label htmlFor="initialReaction">
-                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Explored the environment with a tall body posture." onChange={handleChange} />
+                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Explored the environment with a tall body posture." defaultChecked={initialReaction === 'Explored the environment with a tall body posture.'} onChange={handleChange} />
                                 <span>Explored the environment with a tall body posture.</span>
                             </label>
                         </p>
                         <p>
                             <label htmlFor="initialReaction">
-                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Explored the environment with a crouched body posture." onChange={handleChange} />
+                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Explored the environment with a crouched body posture." defaultChecked={initialReaction === 'Explored the environment with a crouched body posture.'} onChange={handleChange} />
                                 <span>Explored the environment with a crouched body posture.</span>
                             </label>
                         </p>
                         <p>
                             <label htmlFor="initialReaction">
-                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Initially found a place to hide but came out later to explore." onChange={handleChange} />
+                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Initially found a place to hide but came out later to explore." defaultChecked={initialReaction === 'Initially found a place to hide but came out later to explore.'} onChange={handleChange} />
                                 <span>Initially found a place to hide but came out later to explore.</span>
                             </label>
                         </p>
                         <p>
                             <label htmlFor="initialReaction">
-                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Quickly found a place to hide and remained there." onChange={handleChange} />
+                                <input type="checkbox" name="initialReaction" className="form-check-input" value="Quickly found a place to hide and remained there." defaultChecked={initialReaction === 'Quickly found a place to hide and remained there.'} onChange={handleChange} />
                                 <span>Quickly found a place to hide and remained there.</span>
                             </label>
                         </p>
@@ -187,7 +217,7 @@ function UpdateForm(props) {
                                 <span>Bites or attempts to bite hand.</span>
                             </label>
                         </p>
-                    </div>
+                    {/* </div> */}
                     <div className="form-group">
                         <p>When engaging in play the animal (please mark all that apply):</p>
                         <p>
@@ -273,13 +303,19 @@ function UpdateForm(props) {
                         </p>
                     </div>
                     <div className="form-group">
-                        <p>In your opinion, which home setting would this animal be suited for? (Check all that apply)</p>
-                        <p>
-                            <label htmlFor="animalOKWithKids">
-                                <input type="checkbox" name="animalOKWithKids" className="form-check-input" value="Yes" onChange={handleChange} />
-                                <span>A family with children.</span>
-                            </label>
-                        </p>
+                        <p>In your opinion, which home setting would this animal be suited for?</p>
+                        <div className="form-check form-check-inline">
+                            <div className="row">
+                                <p>A family with children.</p>
+                            </div>
+                            <div className="row">
+                                <label className="form-check-label">Yes</label>
+                                <input name="animalOKWithKids" type="radio" className="form-check-input" value="Yes" onChange={handleChange} />
+
+                                <label className="form-check-label">No</label>
+                                <input name="animalOKWithKids" type="radio" className="form-check-input" value="No" onChange={handleChange} />
+                            </div>
+                        </div>
                     </div>
                     <div className="form-group">
                         <p>
@@ -300,7 +336,7 @@ function UpdateForm(props) {
                     <div className="form-group">
                         <p>
                             <label htmlFor="animalOKWithCats">
-                                <input type="checkbox" name="animalOKWithCats" className="form-check-input" value="Yes" onChange={handleChange} />
+                                <input type="checkbox" name="animalOKWithCats" className="form-check-input" defaultChecked={true} value="Yes" onChange={handleChange} />
                                 <span>A home with other cats.</span>
                             </label>
                         </p>
@@ -308,17 +344,14 @@ function UpdateForm(props) {
                     <div className="form-group">
                         <p>
                             <label htmlFor="animalOKWithDogs">
-                                <input type="checkbox" name="animalOKWithDogs" className="form-check-input" value="Yes" onChange={handleChange} />
+                                <input type="checkbox" name="animalOKWithDogs" className="form-check-input" defaultChecked={false} value="Yes" onChange={handleChange} />
                                 <span>A home with other dogs.</span>
                             </label>
                         </p>
                     </div>
+                    <p>Update animal profile:</p>
                     <div className="form-group">
-                        <p>Update animal description:</p>
-                        <div className="input-field col s12">
-                            <label htmlFor="animalDescriptionPlain">Help me get adopted!</label> <br />
-                            <input name="animalDescriptionPlain" type="text" rows="5" className="form-check-input" onChange={handleChange} />
-                        </div>
+                        <input name="animalProfile" defaultValue={animalProfile} type="text" rows="3" onChange={handleChange} />
                     </div>
                     {/* <div className="form-group">
                         <p>Foster status:</p>
@@ -330,16 +363,7 @@ function UpdateForm(props) {
                                 <option value="adopted">Adopted</option>
                             </select>
                         </div>
-                    </div> */}
-                    {/* <MDBDropdown size="lg">
-                        <MDBDropdownToggle caret color="danger">
-                        Change Foster Status
-                        </MDBDropdownToggle>
-                        <MDBDropdownMenu color="danger" basic>
-                            <MDBDropdownItem>Returned</MDBDropdownItem>
-                            <MDBDropdownItem>Adopted</MDBDropdownItem>
-                        </MDBDropdownMenu>
-                    </MDBDropdown> */}
+                    </div>
                 {/* <button id="submit" type="submit">Submit</button> */}
             </form>
         </div>
