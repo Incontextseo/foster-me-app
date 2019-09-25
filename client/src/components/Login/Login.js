@@ -36,14 +36,14 @@ class Login extends Component {
                         <h2>Login Form</h2>
                         <form className="login" />
                         <div className="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" id="email-input" placeholder="Email" value={this.state.email}
                                 name="email"
                                  onChange={this.handleInputChange}
                                 />
                             </div>
                         <div className="form-group">
-                            <label for="exampleInputPassword1">Password</label>
+                            <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" id="password-input" placeholder="Password" value={this.state.password}
                                 name="password"
                                  onChange={this.handleInputChange}
@@ -53,8 +53,8 @@ class Login extends Component {
                         <br />
                         <Router>
                             <div>
-                            <p>Or sign up <a href="/Search">here</a></p>
-                        <Route exact path="/Search" component={Signup} />
+                            <p>Or sign up <a href="/signup">here</a></p>
+                        <Route exact path="/signup" component={Signup} />
                             </div>
                         </Router>
                     </div>

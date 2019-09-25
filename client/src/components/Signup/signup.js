@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './signup.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from '../Login/Login';
-import "./signupjs" 
+// import "./signupjs" 
 import axios from 'axios';
 
 

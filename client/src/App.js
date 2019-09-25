@@ -9,6 +9,7 @@ import History from './pages/History';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Signup from './pages/Signup/Signup';
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/api/animals/current/" component={Fosters} />
             <Route exact path="/history" component={History} />
             <Route exact path="/api/animals/past" component={History} />
+            <Route exact path="/signup" component={Signup} />
         <Footer />
       </div>
     </Router>
