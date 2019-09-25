@@ -8,18 +8,6 @@
     animation-iteration-count: 1;
 }
 
-.btn {
-    background-color: #1E1D40;
-    color: white;
-    margin: 10px;
-    margin-left: 0;
-}
-
-.btn:hover {
-    background-color: #61dafb;
-    color: #1E1D40;
-}
-
 @keyframes growCorrect {
     0% {transform: scale(1); color: white; }
     25% {transform: scale(1.5) }

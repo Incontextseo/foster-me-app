@@ -4,6 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const dotenv = require("dotenv");
 dotenv.config();
+<<<<<<< HEAD
+=======
+var passport = require("./config/passport");
+>>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

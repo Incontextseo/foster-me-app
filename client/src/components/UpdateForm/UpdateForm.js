@@ -1,10 +1,9 @@
 import React from "react";
 import "./UpdateForm.css";
-// import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 function UpdateForm(props) {
 
-    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, handleChange} = props;
+    const { animalID, animalName, animalSpecies, animalGeneralAge, animalSex, animalBreed, handleChange } = props;
 
     return (
         <div className="col-md-12">
@@ -330,16 +329,7 @@ function UpdateForm(props) {
                                 <option value="adopted">Adopted</option>
                             </select>
                         </div>
-                    </div> */}
-                    {/* <MDBDropdown size="lg">
-                        <MDBDropdownToggle caret color="danger">
-                        Change Foster Status
-                        </MDBDropdownToggle>
-                        <MDBDropdownMenu color="danger" basic>
-                            <MDBDropdownItem>Returned</MDBDropdownItem>
-                            <MDBDropdownItem>Adopted</MDBDropdownItem>
-                        </MDBDropdownMenu>
-                    </MDBDropdown> */}
+                    </div>
                 {/* <button id="submit" type="submit">Submit</button> */}
             </form>
         </div>
