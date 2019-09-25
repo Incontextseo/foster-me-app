@@ -44,37 +44,35 @@ class Fosters extends React.Component {
         <h1>Your Current Fosters</h1>
         {this.state.animals.map(animal => (
           <div className="container" key={animal.animalID}>
-              {animal.animalID ? (
-                <AnimalResult
-                  animalID={animal.animalID}
-                  animalName={animal.animalName}
-                  animalGeneralAge={animal.animalGeneralAge}
-                  animalGeneralSizePotential={animal.animalGeneralSizePotential}
-                  animalDescriptionPlain={animal.animalDescriptionPlain}
-                  animalThumbnailUrl={animal.animalThumbnailUrl}
-                />
-              ) : (
-                <h3>No Current Fosters</h3>
-              )}
-                <Button 
-                  onClick={() => this.returnAnimal(animal.animalID)}
-                  buttonText="Return"
-                  animalID={animal.animalID}
-                />
-                <ModalUpdateForm
-                  animalID={animal.animalID}
-                  animalName={animal.animalName}
-                  animalGeneralAge={animal.animalGeneralAge}
-                  fosterReason={animal.fosterReason}
-                  animalSex={animal.animalSex}
-                  animalBreed={animal.animalBreed}
-                  animalDescriptionPlain={animal.animalDescriptionPlain}
-                  animalHouseTrained= {animal.animalHouseTrained}
-                  interactWithChildren= {animal.interactWithChildren}
-                  interactWithPets= {animal.interactWithPets}
-                  interactionComments={animal.interactionComments}
-                  animalProfile={animal.animalProfile}
-                />
+            <AnimalResult
+              animalID={animal.animalID}
+              animalName={animal.animalName}
+              animalGeneralAge={animal.animalGeneralAge}
+              animalGeneralSizePotential={animal.animalGeneralSizePotential}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
+              animalThumbnailUrl={animal.animalThumbnailUrl}
+              animalBreed={animal.animalBreed}
+              urlSecureFullsize={animal.urlSecureFullsize}
+            />
+            <Button 
+              onClick={() => this.returnAnimal(animal.animalID)}
+              buttonText="Return"
+              animalID={animal.animalID}
+            />
+            <ModalUpdateForm
+              animalID={animal.animalID}
+              animalName={animal.animalName}
+              animalGeneralAge={animal.animalGeneralAge}
+              fosterReason={animal.fosterReason}
+              animalSex={animal.animalSex}
+              animalBreed={animal.animalBreed}
+              animalDescriptionPlain={animal.animalDescriptionPlain}
+              animalHouseTrained= {animal.animalHouseTrained}
+              interactWithChildren= {animal.interactWithChildren}
+              interactWithPets= {animal.interactWithPets}
+              interactionComments={animal.interactionComments}
+              animalProfile={animal.animalProfile}
+            />
           </div>
 
         ))}
