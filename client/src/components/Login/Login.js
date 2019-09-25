@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
 import './Login.css'
-import Signup from '../Signup/signup';
+// import Signup from '../Signup/signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from 'axios';
+import Signup from '../Signup/signup';
+import { Redirect } from 'react-router';
 
 
 class Login extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
+        redirect: false
 }
     componentWillUnmount() {
         window.clearTimeout(this.timeout)
     }
-    signup = () => {
-        axios.post('/api/login', this.state)
+    Login = () => {
+        axios.post('/api/auth/login', this.state)
+        .then(()=>this.setState({redirect: true}))
     }
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
@@ -28,9 +32,27 @@ class Login extends Component {
           [name]: value
         });
       };
+    //   Login_input = event => {
+    //     event.preventDefault();
+        // const userData = {
+        //   email: emailInput.trim(),
+        //   password: passwordInput.trim()
+        // };
+    
+        // if (!userData.email || !userData.password) {
+        //   return;
+        // }
+    
+        // // If we have an email and password we run the loginUser function and clear the form
+        // loginUser(userData.email, userData.password);
+        // emailInput.val("");
+        // passwordInput.val("");
+    //   };
+      
     render() {
         return (
         <div className="container">
+              {this.state.redirect?<Redirect to ="/fosters" /> : null}
                 <div className="row">
                     <div className="col-md-6 col-md-offset-3">
                         <h2>Login Form</h2>
@@ -49,7 +71,7 @@ class Login extends Component {
                                  onChange={this.handleInputChange}
                                 />
                         </div>
-                        <button  type="submit" className="btn btn-default" onClick={this.signup} >Log In</button>
+                        <button  type="submit" className="btn btn-default" onClick={this.Login} >Log In</button>
                         <br />
                         <Router>
                             <div>
@@ -107,5 +129,3 @@ export default Login
 //           console.log(err);
 //         });
 //     }
-//   });
-  

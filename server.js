@@ -1,10 +1,12 @@
+var passport = require("./config/passport");
 const express = require("express");
-const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const dotenv = require("dotenv");
 dotenv.config();
-var passport = require("./config/passport");
+app.use(passport.initialize());
+app.use(passport.session());
+const routes = require("./routes");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -38,3 +40,5 @@ db.sequelize.sync(syncOptions).then(function() {
   });
   
 module.exports = app;
+
+

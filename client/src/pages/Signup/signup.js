@@ -61,7 +61,7 @@ handleInputChange = event => {
                         <br />
                         <Router>
                             <div>
-                            <p>Or login <a href="/login">here</a></p>
+                            <p>Or login <a href="/">here</a></p>
                         <Route exact path="/login" component={Login} />
                             </div>
                         </Router>
