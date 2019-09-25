@@ -1,6 +1,5 @@
 const db = require("../../models");
 const router = require("express").Router();
-<<<<<<< HEAD
 const axios = require("axios");
 const Op = require("Sequelize").Op;
 const path = require("path");
@@ -89,8 +88,6 @@ router.route("/search")
         .catch(err => console.log(err));
 
     });
-=======
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
 
 // routes match /api/animals
 router.route("/")
@@ -157,7 +154,6 @@ router.route("/current")
             res.json(dbAnimal);
         });
     })
-<<<<<<< HEAD
     .delete(function(req, res) {
         db.Animal.destroy({
             where: {
@@ -168,8 +164,6 @@ router.route("/current")
             res.json(dbAnimal);
         });
     });
-=======
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
 
 
 //routes match /api/animals/past
@@ -177,12 +171,8 @@ router.route("/past")
     .get(function(req, res) {
         db.Animal.findAll({
             where: {
-<<<<<<< HEAD
                 // fosterStatus: "returned",
                 [Op.or]: [{fosterStatus: "returned"}, {fosterStatus: "adopted"}]
-=======
-                fosterStatus: "returned"
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
             }
         })
         .then(function(dbAnimal) {
@@ -193,11 +183,7 @@ router.route("/past")
         db.Animal.update(req.body,
         {
             where: {
-<<<<<<< HEAD
             animalID: req.body.animalID
-=======
-            animalID: req.params.animalID
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
             }
         })
         .then(function(dbAnimal) {
@@ -205,11 +191,7 @@ router.route("/past")
         });
     });
 
-<<<<<<< HEAD
     // routes match /api/animals/:animalID
-=======
-    // routes match /api/animal/:animalID
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
     router.route("/:animalID")
         .get(function(req, res) {
             db.Animal.update(req.body,

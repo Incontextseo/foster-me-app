@@ -1,9 +1,8 @@
 
 import React, { Component } from 'react'
-import './signup.css'
+import './Signup.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from '../Login/Login';
-// import "./signupjs" 
 import axios from 'axios';
 
 
@@ -83,4 +82,4 @@ handleInputChange = event => {
 
 
 
-export default Signup
+export default Signup;

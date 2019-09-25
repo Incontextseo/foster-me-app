@@ -3,10 +3,7 @@ import SearchForm from "../../components/SearchForm";
 import AnimalResult from "../../components/AnimalResult";
 import Button from "../../components/Button";
 import API from "../../utils/API";
-<<<<<<< HEAD
 import ModalViewProfile from "../../components/Modal/ModalViewProfile";
-=======
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
 
 class Search extends React.Component {
   state = {
@@ -29,11 +26,8 @@ class Search extends React.Component {
     API.getAnimals(this.state.searchZip, this.state.animalType)
     .then( results => {
 
-<<<<<<< HEAD
       console.log(results);
 
-=======
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
       // RescueGroups.org API returns results as object instead of array 
       //so loop through results & push to array so map function works
       let details = [];
@@ -49,11 +43,7 @@ class Search extends React.Component {
   };
 
   saveAnimal = animalID => {
-<<<<<<< HEAD
     console.log("Save animal button clicked")
-=======
-    console.log("Save animal button clicked ")
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
     const animal = this.state.animals.find(animal => animal.value.animalID === animalID);
     API.saveAnimal({
       animalID: animal.value.animalID,
@@ -79,12 +69,9 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
         <div className="col-12 text-center">
             <h1>SEARCH AVAILABLE ANIMALS</h1>
         </div>
-=======
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
         <SearchForm
           handleInputChange={this.handleInputChange}
           handleSelectionChange={this.handleSelectionChange}
@@ -95,7 +82,6 @@ class Search extends React.Component {
         
         {this.state.animals.map(animal => (
           <div className="container" key={animal.value.animalID}>
-<<<<<<< HEAD
               <AnimalResult 
                 animalID={animal.value.animalID}
                 animalName={animal.value.animalName}
@@ -117,33 +103,10 @@ class Search extends React.Component {
                 animalBreed={animal.value.animalBreed}
                 animalDescriptionPlain={animal.value.animalDescriptionPlain}
               />
-=======
-            <AnimalResult 
-              animalID={animal.value.animalID}
-              animalName={animal.value.animalName}
-              animalGeneralAge={animal.value.animalGeneralAge}
-              animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
-              animalDescriptionPlain={animal.value.animalDescriptionPlain}
-              animalThumbnailUrl={animal.value.animalThumbnailUrl}
-              // handleAnimalClick={this.saveAnimal}
-              // buttonText="Foster me"
-            />
-            <Button 
-              // handleAnimalClick={this.saveAnimal}
-              onClick={() => this.saveAnimal(animal.value.animalID)}
-              buttonText="Foster me"
-              animalID={animal.value.animalID}
-            />
-
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
           </div>
 
         ))}
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
     );
   };
 };

@@ -1,27 +1,6 @@
-<<<<<<< HEAD
-import React from 'react'
-import './Login.css'
-
-function Login (props) {
-
-    const { fosterID, fosterName} = props;
-
-        return (
-            <article id={fosterID}>
-                <button 
-                    className="btn waves-effect waves-light" 
-                    // onClick={() => handleFosterClick(fosterID)}
-                    data-id={fosterID}
-                >{fosterName}</button>
-            </article>
-        )
-    }
-
-export default Login
-=======
 import React, { Component } from 'react'
 import './Login.css'
-import Signup from '../Signup/signup';
+import Signup from '../Signup/Signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from 'axios';
 
@@ -85,7 +64,7 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default Login;
 
 
 
@@ -130,4 +109,3 @@ export default Login
 //     }
 //   });
   
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
