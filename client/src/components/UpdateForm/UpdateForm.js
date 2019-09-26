@@ -64,21 +64,23 @@ function UpdateForm(props) {
             <form>
                 <h3>Foster info</h3>
                 <div className="row">
-                    <div className="column col-6">
+                    <div className="col-6">
                         <p>Name: {animalName}</p>
                         <p>Species: {animalSpecies}</p>
                         <p>Age: {animalGeneralAge}</p>
                     </div>
-                    <div className="column col-6">
+                    <div className="col-6">
                         <p>Animal ID: {animalID}</p>
                         <p>Gender: {animalSex}</p>
                         <p>Breed: {animalBreed}</p>
                     </div>
                 </div>
                 <div className="row">
-                    Foster Reason:
-                    <div className="form-group">
-                        <input name="fosterReason" defaultValue={fosterReason} type="text" onChange={handleChange} />
+                    <div className="col-12">
+                        Foster Reason:
+                        <div className="form-group">
+                            <input name="fosterReason" defaultValue={fosterReason} type="text" row="30" onChange={handleChange} />
+                        </div>
                     </div>
                 </div>
 
@@ -88,7 +90,7 @@ function UpdateForm(props) {
                 <h3>Update details about your foster</h3>
                 <div className="row form-check form-check-inline">
                     <div className="column col-8">
-                        Is the animal house trained/litter box trained?
+                        <p>Is the animal house trained/litter box trained?</p>
                     </div>
                     <div className="column col-4">
                         <label className="form-check-label">Yes</label>
@@ -98,85 +100,183 @@ function UpdateForm(props) {
                     </div>                    
                 </div>
                 <div className="row form-check form-check-inline">
-                    <div className="column col-8">
+                    <div className="col-8">
                         <p>Has the animal interacted with children?</p>
                     </div>
-                    <div className="column col-4">
+                    <div className="col-4">
                         <label className="form-check-label">Yes</label>
                         <input name="interactWithChildren" type="radio" className="form-check-input" defaultChecked={interactWithChildren === 'Yes'} value="Yes" onChange={handleChange} />
                         <label className="form-check-label">No</label>
                         <input name="interactWithChildren" type="radio" className="form-check-input" value="No" defaultChecked={interactWithChildren === 'No'} onChange={handleChange} />
                     </div>
                 </div>
-                    <div className="form-check form-check-inline">
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
                         <p>Has the animal interacted with other pets?</p>
+                    </div>
+                    <div className="col-4">
                         <label className="form-check-label">Yes</label>
-                        <input name="interactWithPets" type="radio" className="form-check-input" value="Yes" defaultChecked={interactWithPets === 'Yes'} onChange={handleChange} />
-
+                        <input name="interactWithPets" type="radio" className="form-check-input" defaultChecked={interactWithPets === 'Yes'} value="Yes" onChange={handleChange} />
                         <label className="form-check-label">No</label>
                         <input name="interactWithPets" type="radio" className="form-check-input" value="No" defaultChecked={interactWithPets === 'No'} onChange={handleChange} />
                     </div>
-                    <div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
                         Other Interaction Comments:
                         <div className="form-group">
-                            <input name="interactionComments" defaultValue={interactionComments} type="text" rows="3" onChange={handleChange} />
+                            <input name="interactionComments" defaultValue={interactionComments} type="text" size="50" onChange={handleChange} />
                         </div>
                     </div>
-
-                    <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
-                    <div className="form-group">
-                        <p>When you first brought the animal home they (please mark all that apply):</p>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <p><strong>Notice!</strong> Please fill out the below sections after the animal has been in the home for at least 3 days.</p>
+                    </div>
+                </div>
+                <h4>When you first brought the animal home they:</h4>
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Explored the environment with a tall body posture.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="initialReaction1" type="radio" className="form-check-input" defaultChecked={initialReaction1 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="initialReaction1" type="radio" className="form-check-input" value="No" defaultChecked={initialReaction1 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                    {/* <div className="form-group">
+                        <p></p>
                         <p>
                             <label htmlFor="initialReaction1">
                                 <input type="checkbox" name="initialReaction1" className="form-check-input" value="Yes" defaultChecked={initialReaction1} onChange={handleChange} />
                                 <span>Explored the environment with a tall body posture.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Explored the environment with a crouched body posture.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="initialReaction2" type="radio" className="form-check-input" defaultChecked={initialReaction2 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="initialReaction2" type="radio" className="form-check-input" value="No" defaultChecked={initialReaction2 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="initialReaction2">
                                 <input type="checkbox" name="initialReaction2" className="form-check-input" value="Yes" defaultChecked={initialReaction2} onChange={handleChange} />
                                 <span>Explored the environment with a crouched body posture.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Initially found a place to hide but came out later to explore.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="initialReaction3" type="radio" className="form-check-input" defaultChecked={initialReaction3 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="initialReaction3" type="radio" className="form-check-input" value="No" defaultChecked={initialReaction3 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="initialReaction3">
                                 <input type="checkbox" name="initialReaction3" className="form-check-input" value="Yes" defaultChecked={initialReaction3} onChange={handleChange} />
                                 <span>Initially found a place to hide but came out later to explore.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Quickly found a place to hide and remained there.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="initialReaction4" type="radio" className="form-check-input" defaultChecked={initialReaction4 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="initialReaction4" type="radio" className="form-check-input" value="No" defaultChecked={initialReaction4 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="initialReaction4">
                                 <input type="checkbox" name="initialReaction4" className="form-check-input" value="Yes" defaultChecked={initialReaction4} onChange={handleChange} />
                                 <span>Quickly found a place to hide and remained there.</span>
                             </label>
-                        </p>
+                        </p> */}
+                    {/* </div> */}
+                <h4>When greeting or approaching the animal they:</h4>
+                    {/* <div className="form-group">
+                        <p>When greeting or approaching the animal they (please mark all that apply):</p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Solicits attention by rubbing, chirping, etc.</p>
                     </div>
-                    <div className="form-group">
-                        <p>When greeting or approaching the animal they (please mark all that apply):</p>
-                        <p>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="greetingReaction1" type="radio" className="form-check-input" defaultChecked={greetingReaction1 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="greetingReaction1" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction1 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="greetingReaction1">
                             <input type="checkbox" name="greetingReaction1" className="form-check-input" value="Yes" defaultChecked={greetingReaction1} onChange={handleChange} />
                                 <span>Solicits attention by rubbing, chirping, etc.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Does not approach.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="greetingReaction2" type="radio" className="form-check-input" defaultChecked={greetingReaction2 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="greetingReaction2" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction2 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="greetingReaction2">
                                 <input type="checkbox" name="greetingReaction2" className="form-check-input" value="Yes" defaultChecked={greetingReaction2} onChange={handleChange} />
                                 <span>Does not approach.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Retreats or attempts to hide.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="greetingReaction3" type="radio" className="form-check-input" defaultChecked={greetingReaction3 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="greetingReaction3" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction3 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="greetingReaction3">
                                 <input type="checkbox" name="greetingReaction3" className="form-check-input" value="Yes" defaultChecked={greetingReaction3} onChange={handleChange} />
                                 <span>Retreats or attempts to hide.</span>
                             </label>
-                        </p>
-                        <p>
+                        </p> */}
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Approaches after encouraged.</p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="greetingReaction3" type="radio" className="form-check-input" defaultChecked={greetingReaction3 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="greetingReaction3" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction3 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="greetingReaction4">
                                 <input type="checkbox" name="greetingReaction4" className="form-check-input" value="Yes" defaultChecked={greetingReaction4} onChange={handleChange} />
                                 <span>Approaches after encouraged.</span>
                             </label>
-                        </p>
+                        </p> */}
                         <p>
                             <label htmlFor="greetingReaction5">
                                 <input type="checkbox" name="greetingReaction5" className="form-check-input" value="Yes" defaultChecked={greetingReaction5} onChange={handleChange} />
@@ -189,7 +289,18 @@ function UpdateForm(props) {
                                 <span>Charges towards you.</span>
                             </label>
                         </p>
-                        <p>
+                <div className="row form-check form-check-inline">
+                    <div className="col-8">
+                        <p>Hisses or growls.                        </p>
+                    </div>
+                    <div className="col-4">
+                        <label className="form-check-label">Yes</label>
+                        <input name="greetingReaction7" type="radio" className="form-check-input" defaultChecked={greetingReaction7 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <label className="form-check-label">No</label>
+                        <input name="greetingReaction7" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction7 === 'No'} onChange={handleChange} />
+                    </div>
+                </div>
+                        {/* <p>
                             <label htmlFor="greetingReaction7">
                                 <input type="checkbox" name="greetingReaction7" className="form-check-input" value="Yes" 
                                 defaultChecked={greetingReaction7} 
@@ -197,7 +308,7 @@ function UpdateForm(props) {
                                 <span>Hisses or growls.</span>
                             </label>
                         </p>
-                    </div>
+                    </div> */}
                     <div className="form-group">
                         <p>When petting the animal they (please mark all that apply):</p>
                         <p>
@@ -354,11 +465,11 @@ function UpdateForm(props) {
                             </div>
                             <div className="row">
                                 <label className="form-check-label">Yes</label>
-                                <input name="animalOKWithKids" type="radio" className="form-check-input" defaultChecked={animalOKWithKids} value="Yes" onChange={handleChange} />
+                                <input name="animalOKWithKids" type="radio" className="form-check-input" defaultChecked={animalOKWithKids === 'Yes'} value="Yes" onChange={handleChange} />
 
                                 <label className="form-check-label">No</label>
                                 <input name="animalOKWithKids" type="radio" className="form-check-input" 
-                                defaultChecked={animalOKWithKids} value="No" onChange={handleChange} />
+                                defaultChecked={animalOKWithKids === 'No'} value="No" onChange={handleChange} />
                             </div>
                         </div>
                     </div>
