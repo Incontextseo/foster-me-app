@@ -1,35 +1,30 @@
-
 import React, { Component } from 'react'
-import './Signup.css'
+import './Register.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from '../Login/Login';
 import axios from 'axios';
 
 
-class Signup extends Component {
+class Register extends Component {
     state = {
         email: "",
-        password: ""
-}
-signup = () => {
+        password: Register = () => {
     axios.post('/api/signup', this.state)
-}
-handleInputChange = event => {
+        }
+    }
+
+    handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
-    // if (name === "password") {
-    //   value = value.substring(0, 15);
-    // }
-    // Updating the input's state
-    this.setState({
-      [name]: value
-    });
-  };
+        this.setState({
+        [name]: value
+        });
+    }
  
     componentWillUnmount() {
         window.clearTimeout(this.timeout)
-    } 
+    }
     
     render() {
         return (
@@ -63,23 +58,9 @@ handleInputChange = event => {
                         </Router>
                     </div>
                 </div>
-       </div> )
+            </div> 
+       );
     }
-}
+};
 
-// function signUpUser(email, passm
-// word) {
-//     $.post("/api/signup", {
-//       email: email,
-//       password: password
-//     })
-//     //   .then(function(data) {
-//     //     window.location.replace("/members");
-//     //     // If there's an error, handle it by throwing up a bootstrap alert
-//     //   })
-//       .catch(handleLoginErr);
-//   }
-
-
-
-export default Signup;
+export default Register;

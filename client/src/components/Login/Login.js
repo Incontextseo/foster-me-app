@@ -1,36 +1,37 @@
 import React, { Component } from 'react'
 import './Login.css'
-import Signup from '../Signup/Signup';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from 'axios';
+// import Register from '../Register/Register';
+import { Redirect } from 'react-router';
 
 
 class Login extends Component {
     state = {
         email: "",
-        password: ""
-}
+        password: "",
+        redirect: false
+    }
     componentWillUnmount() {
         window.clearTimeout(this.timeout)
     }
-    signup = () => {
-        axios.post('/api/login', this.state)
+    Login = () => {
+        axios.post('/api/auth/login', this.state)
+        .then(()=>this.setState({redirect: true}))
     }
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
         let value = event.target.value;
         const name = event.target.name;
-        // if (name === "password") {
-        //   value = value.substring(0, 15);
-        // }
-        // Updating the input's state
         this.setState({
           [name]: value
         });
       };
+      
     render() {
         return (
         <div className="container">
+              {this.state.redirect?<Redirect to ="/fosters" /> : null}
                 <div className="row">
                     <div className="col-md-6 col-md-offset-3">
                         <h2>Login Form</h2>
@@ -49,14 +50,14 @@ class Login extends Component {
                                  onChange={this.handleInputChange}
                                 />
                         </div>
-                        <button  type="submit" className="btn btn-default" onClick={this.signup} >Log In</button>
+                        <button  type="submit" className="btn btn-default" onClick={this.Login} >Log In</button>
                         <br />
-                        <Router>
+                        {/* <Router> */}
                             <div>
                             <p>Or sign up <a href="/signup">here</a></p>
-                        <Route exact path="/signup" component={Signup} />
+                        {/* <Route exact path="/signup" component={Register} /> */}
                             </div>
-                        </Router>
+                        {/* </Router> */}
                     </div>
             </div> 
          </div>
