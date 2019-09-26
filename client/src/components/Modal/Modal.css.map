@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "AAIA,AAAA,iBAAiB,CAAA;EACb,gBAAgB,ECFF,OAAO;CDGxB",
+    "mappings": "AAIA,AAAA,iBAAiB,CAAA;EACb,gBAAgB,ECFA,OAAO;CDG1B",
     "sources": [
         "Modal.scss",
         "../../Styles/_variables.scss",
         "../../Styles/_functions.scss",
+        "../../Styles/_variables.scss",
         "../../Styles/_mediaQ.scss"
     ],
     "names": [],
