@@ -17,7 +17,7 @@ class Nav extends Component {
   render() {
       return (
         <div className="nav__container">
-          <img className="nav__logo" src={Logo} alt="foster me"/>
+          <img className="nav__logo" src={Logo} alt="foster me logo"/>
         
         <ul className={`nav ${this.state.isOpen?"open": ""}`}    >
           <li className="list__items nav__home"><a href="/">Home</a></li>
@@ -26,7 +26,7 @@ class Nav extends Component {
           <li className="list__items nav__history"><a href="/history">My Past Fosters</a></li>
         </ul>
 
-        <img src={Toggler} onClick={this.toggleCollapse} className="nav__toggle"/>
+        <img src={Toggler} onClick={this.toggleCollapse} alt="" className="nav__toggle"/>
         </div>
 
 
