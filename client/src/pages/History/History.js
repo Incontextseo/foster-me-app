@@ -47,7 +47,6 @@ class History extends React.Component {
               animalGeneralAge={animal.animalGeneralAge}
               animalGeneralSizePotential={animal.animalGeneralSizePotential}
               animalDescriptionPlain={animal.animalDescriptionPlain}
-              animalThumbnailUrl={animal.animalThumbnailUrl}
               animalBreed={animal.animalBreed}
               urlSecureFullsize={animal.urlSecureFullsize}
             />

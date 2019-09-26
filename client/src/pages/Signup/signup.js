@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import './Signup.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -8,7 +7,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router';
 
 
-class signup extends Component {
+class Signup extends Component {
     state = {
         email: "",
         password: "",
@@ -22,10 +21,6 @@ handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
-    // if (name === "password") {
-    //   value = value.substring(0, 15);
-    // }
-    // Updating the input's state
     this.setState({
       [name]: value
     });
@@ -61,7 +56,7 @@ handleInputChange = event => {
                         <br />
                         <Router>
                             <div>
-                            <p>Or login <a href="/login">here</a></p>
+                            <p>Or login <a href="/">here</a></p>
                         <Route exact path="/login" component={Login} />
                             </div>
                         </Router>
@@ -70,4 +65,4 @@ handleInputChange = event => {
        </div> )
     }
 }
-export default signup;
+export default Signup;
