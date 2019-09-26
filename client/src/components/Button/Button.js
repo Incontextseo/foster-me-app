@@ -6,9 +6,9 @@ function Button(props) {
     const { animalID, buttonText, onClick} = props;
 
     return (
-        <div className="col-12">
+        <div className="decision__button__container">
             <button 
-                className="btn" 
+                className="search__btn decision__btn" 
                 data-id={animalID}
                 onClick={onClick}
 

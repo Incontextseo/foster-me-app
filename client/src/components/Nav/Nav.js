@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Logo from './../../Styles/Images/logo-naked.png';
+import Toggler from './../../Styles/Images/toggle-bar.png';
 import "./Nav.css";
 
 class Nav extends Component {
@@ -19,13 +20,13 @@ class Nav extends Component {
           <img className="nav__logo" src={Logo} alt="foster me"/>
         
         <ul className={`nav ${this.state.isOpen?"open": ""}`}    >
-          <li className="list__items"><a href="/">Home</a></li>
-          <li className="list__items"><a href="/search">Search</a></li>
-          <li className="list__items"><a href="/fosters">My Fosters</a></li>
-          <li className="list__items"><a href="/history">My Past Fosters</a></li>
+          <li className="list__items nav__home"><a href="/">Home</a></li>
+          <li className="list__items nav__search"><a href="/search">Search</a></li>
+          <li className="list__items nav__fosters"><a href="/fosters">My Fosters</a></li>
+          <li className="list__items nav__history"><a href="/history">My Past Fosters</a></li>
         </ul>
 
-        <button onClick={this.toggleCollapse} className="nav__toggle">Click Me!!</button>
+        <img src={Toggler} onClick={this.toggleCollapse} className="nav__toggle"/>
         </div>
 
 

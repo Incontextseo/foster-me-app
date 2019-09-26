@@ -1,14 +1,49 @@
-.svg-inline--fa {
-    font-size: 100px;
+.decisions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem 1rem;
+  background-clip: content-box;
+  background-color: #1E1D40;
+  width: 100%;
 }
 
-.shake {
-    animation: shake 0.15s; 
-    animation-iteration-count: 2; 
+@media (min-width: 600px) {
+  .decisions {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .decisions .decision__btn {
+    margin-right: 2.5rem;
+  }
 }
 
-@keyframes shake {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(4px, 0px); }
-    100% { transform: translate(-4px, 0px); }
+.decision__btn {
+  background-color: transparent;
 }
+
+.container .decision__btn {
+  background-color: transparent;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: .5em;
+  color: #4AB0D9;
+}
+
+.result__container {
+  padding: 0 1rem;
+  background-clip: content-box;
+  background-color: #1E1D40;
+}
+/*# sourceMappingURL=Search.css.map */

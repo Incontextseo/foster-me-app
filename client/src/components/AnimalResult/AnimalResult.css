@@ -1,31 +1,95 @@
-ul.navList {
-    display: flex;
-    justify-content: space-around;
-    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  background-color: #1E1D40;
+  color: #4AB0D9;
 }
 
-.correct {
-    animation: growCorrect 0.5s;
-    animation-iteration-count: 1;
+.row h3, .row p {
+  margin: 0;
 }
 
-.incorrect {
-    animation: growIncorrect 0.5s;
-    animation-iteration-count: 1;
+.row p {
+  font-size: 14px;
 }
 
-@keyframes growCorrect {
-    0% {transform: scale(1); color: white; }
-    25% {transform: scale(1.5) }
-    50% {transform: scale(1.75); color: #004d40; }
-    50% {transform: scale(1.5) }
-    100% {transform: scale(1); color: white; }
+@media (min-width: 600px) {
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .row h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .row p {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
 }
 
-@keyframes growIncorrect {
-    0% {transform: scale(1); color: white; }
-    25% {transform: scale(1.5) }
-    50% {transform: scale(1.75); color: #b71c1c; }
-    50% {transform: scale(1.5) }
-    100% {transform: scale(1); color: white; }
+.img-area {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
 }
+
+.img-area .news-img {
+  padding: 1rem 2rem;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .img-area .news-img {
+    padding: 0 0 0 1rem;
+    width: 350px;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-area {
+    margin: 0;
+  }
+}
+
+.animal-area {
+  padding: 0 2rem 2rem;
+}
+
+.animal-area span {
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .animal-area {
+    margin: 1rem 0;
+    height: 100%;
+    padding: 1rem 3rem;
+  }
+}
+/*# sourceMappingURL=AnimalResult.css.map */

@@ -27,7 +27,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>Foster Me App</h1>
+        {/* <h1>Foster Me App</h1> */}
        
         {this.state.fosters.map(foster => (
           <div className="container" key={foster.fosterID}>
