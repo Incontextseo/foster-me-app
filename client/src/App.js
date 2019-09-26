@@ -8,7 +8,7 @@ import Fosters from './pages/Fosters';
 import History from './pages/History';
 import NoMatch from "./pages/NoMatch";
 import Nav from './components/Nav';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Footer from './components/Footer';
 import Signup from './pages/Signup/Signup';
 
@@ -16,13 +16,21 @@ class App extends Component {
 
   render() {
     
-    return (
+    // return (
     
-      <Router>
-        <div>
-          <Header />
-          <Nav />
-          <Switch>
+    //   <Router>
+    //     <div>
+    //       <Header />
+    //       <Nav />
+
+
+// function App() {
+  return (
+    <Router>
+      <div className="app__container">
+        {/* <Header /> */}
+        <Nav />
+        <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/search" component={Search} />

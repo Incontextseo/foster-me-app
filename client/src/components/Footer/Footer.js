@@ -8,7 +8,7 @@ const Footer = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="title">This is the End</h5>
+            <h5 className="title">Change a Life!</h5>
             <p>
               Adopt, Dont Shop 	&hearts;	&hearts;
             </p>

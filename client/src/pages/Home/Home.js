@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 import Login from "../../components/Login/Login"
-// /Users/jdclaas/Downloads/foster-me-app-master/client/src/components/Login
 import API from "../../utils/API";
 
 
@@ -27,32 +26,13 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is Homepage!</h1>
-        <p>Once logged in, you see a menu of buttons to go to:</p>
-          <ul>
-            <li>Search and sign-up for fosters</li>
-            <li>View your current Fosters and update their profiles.</li>
-            <li>View the status of your past fosters.</li>
-          </ul>
-
-        <h2>Choose Your Name Below To Begin</h2>
-        <Login>
-</Login>
-        {this.state.fosters.map(foster => (
-          <div className="container" key={foster.fosterID}>
-            {/* <Login 
-              fosterID={foster.fosterID}
-              fosterName={foster.fosterName}
-            /> */}
-
-          </div>
-          
-
-        ))}
+        <div className="search__header">
+            <h1 className="search__title">Welcome Foster Families!</h1>
+            <p className="search__des">Change a life. Find an animal to foster!</p>
+        </div>
+            <Login 
+            />
       </div>
-
-      
-
     );
   };
 };

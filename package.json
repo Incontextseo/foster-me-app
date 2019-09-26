@@ -16,7 +16,8 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.19.0"
+    "sequelize": "^5.19.0",
+    "read-more-react": "^1.0.9"
   },
   "homepage": "https://github.com/Incontextseo/foster-me-app",
   "scripts": {
