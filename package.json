@@ -14,9 +14,14 @@
     "mdbreact": "^4.19.2",
     "multer": "^1.4.2",
     "mysql2": "^1.6.5",
+<<<<<<< HEAD
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.19.0"
+=======
+    "read-more-react": "^1.0.9",
+    "sequelize": "^5.8.6"
+>>>>>>> e3a8cf7769877a5969427033ed9b2502890b7560
   },
   "homepage": "https://github.com/Incontextseo/foster-me-app",
   "scripts": {

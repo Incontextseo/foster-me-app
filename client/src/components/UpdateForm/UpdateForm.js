@@ -266,9 +266,9 @@ function UpdateForm(props) {
                     </div>
                     <div className="col-4">
                         <label className="form-check-label">Yes</label>
-                        <input name="greetingReaction3" type="radio" className="form-check-input" defaultChecked={greetingReaction3 === 'Yes'} value="Yes" onChange={handleChange} />
+                        <input name="greetingReaction4" type="radio" className="form-check-input" defaultChecked={greetingReaction4 === 'Yes'} value="Yes" onChange={handleChange} />
                         <label className="form-check-label">No</label>
-                        <input name="greetingReaction3" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction3 === 'No'} onChange={handleChange} />
+                        <input name="greetingReaction4" type="radio" className="form-check-input" value="No" defaultChecked={greetingReaction4 === 'No'} onChange={handleChange} />
                     </div>
                 </div>
                         {/* <p>

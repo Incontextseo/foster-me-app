@@ -27,17 +27,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is Homepage!</h1>
-        <p>Once logged in, you see a menu of buttons to go to:</p>
-          <ul>
-            <li>Search and sign-up for fosters</li>
-            <li>View your current Fosters and update their profiles.</li>
-            <li>View the status of your past fosters.</li>
-          </ul>
-
-        <h2>Choose Your Name Below To Begin</h2>
-        <Login>
-</Login>
+        {/* <h1>Foster Me App</h1> */}
+       
         {this.state.fosters.map(foster => (
           <div className="container" key={foster.fosterID}>
             {/* <Login 
