@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/foster-me-app/static/css/main.6020811e.chunk.css",
-    "main.js": "/foster-me-app/static/js/main.c4396a50.chunk.js",
-    "main.js.map": "/foster-me-app/static/js/main.c4396a50.chunk.js.map",
+    "main.css": "/foster-me-app/static/css/main.a19c0eb1.chunk.css",
+    "main.js": "/foster-me-app/static/js/main.1f06d127.chunk.js",
+    "main.js.map": "/foster-me-app/static/js/main.1f06d127.chunk.js.map",
     "runtime~main.js": "/foster-me-app/static/js/runtime~main.7379e07d.js",
     "runtime~main.js.map": "/foster-me-app/static/js/runtime~main.7379e07d.js.map",
-    "static/js/2.4c6f3929.chunk.js": "/foster-me-app/static/js/2.4c6f3929.chunk.js",
-    "static/js/2.4c6f3929.chunk.js.map": "/foster-me-app/static/js/2.4c6f3929.chunk.js.map",
+    "static/js/2.3dcf77da.chunk.js": "/foster-me-app/static/js/2.3dcf77da.chunk.js",
+    "static/js/2.3dcf77da.chunk.js.map": "/foster-me-app/static/js/2.3dcf77da.chunk.js.map",
     "index.html": "/foster-me-app/index.html",
-    "precache-manifest.eaf1d4df5a019983aa5a1a4ac0868741.js": "/foster-me-app/precache-manifest.eaf1d4df5a019983aa5a1a4ac0868741.js",
+    "precache-manifest.29767d22e091fa4f9f789f28623a0689.js": "/foster-me-app/precache-manifest.29767d22e091fa4f9f789f28623a0689.js",
     "service-worker.js": "/foster-me-app/service-worker.js",
-    "static/css/main.6020811e.chunk.css.map": "/foster-me-app/static/css/main.6020811e.chunk.css.map"
+    "static/css/main.a19c0eb1.chunk.css.map": "/foster-me-app/static/css/main.a19c0eb1.chunk.css.map",
+    "static/media/Nav.css": "/foster-me-app/static/media/search.8a5d9748.jpg",
+    "static/media/logo-naked.png": "/foster-me-app/static/media/logo-naked.67813313.png",
+    "static/media/toggle-bar.png": "/foster-me-app/static/media/toggle-bar.848dc099.png"
   }
 }
