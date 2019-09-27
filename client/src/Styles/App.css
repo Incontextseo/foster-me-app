@@ -1,7 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-<<<<<<< HEAD
 }
 
 *:before,
@@ -28,32 +27,6 @@ body {
   /* height of your footer */
 }
 
-=======
-}
-
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  position: relative;
-}
-
-.main-container {
-  min-height: 100vh;
-  /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px;
-  /* height of your footer */
-}
-
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 .app__container {
   min-height: 100vh;
   /* will cover the 100% of viewport */
@@ -62,12 +35,9 @@ body {
   position: relative;
   padding-bottom: 100px;
   /* height of your footer */
-<<<<<<< HEAD
 }
 
 h1 {
   text-align: center;
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 /*# sourceMappingURL=App.css.map */

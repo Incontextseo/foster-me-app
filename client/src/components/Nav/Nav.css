@@ -47,15 +47,9 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-<<<<<<< HEAD
   background-color: #020726;
   -webkit-box-shadow: 0 10px 6px -6px #0d0d0d;
   box-shadow: 0 10px 6px -6px #0d0d0d;
-=======
-  background-color: #f1f1f1;
-  -webkit-box-shadow: 0 10px 6px -6px #222;
-  box-shadow: 0 10px 6px -6px #222;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -66,23 +60,12 @@
   text-transform: uppercase;
   font-weight: 800;
   list-style: none;
-<<<<<<< HEAD
   background: rgba(2, 7, 38, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-=======
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -98,12 +81,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-<<<<<<< HEAD
   -ms-flex-line-pack: justify;
       align-content: space-between;
   padding: 15vh 0;
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   /**Display Toggler */
   display: none;
   -webkit-transform: translateY(100vh);
@@ -118,11 +98,8 @@
           animation: slideUp 1s ease;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-<<<<<<< HEAD
   overflow-y: scroll;
   position: absolute;
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 
 .nav.close {
@@ -154,15 +131,9 @@
 }
 
 .list__items {
-<<<<<<< HEAD
   margin: .5rem;
   width: 300px;
   height: 120px;
-=======
-  margin: 16px 0;
-  width: 200px;
-  height: 200px;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   padding: 0 16px;
   color: #fff;
   display: -webkit-box;
@@ -174,10 +145,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-<<<<<<< HEAD
   z-index: 15;
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 
 @media (min-width: 850px) {
@@ -188,14 +156,11 @@
   }
 }
 
-<<<<<<< HEAD
 .list__items a {
   color: #fff;
   text-decoration: none;
 }
 
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 .nav__logo {
   height: 60px;
   width: auto;
@@ -225,13 +190,8 @@
 }
 
 .nav__home {
-<<<<<<< HEAD
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 7, 38, 0.7)), to(rgba(7, 116, 140, 0.68))), url("./../../Styles/Images/home.jpg");
   background-image: linear-gradient(rgba(2, 7, 38, 0.7), rgba(7, 116, 140, 0.68)), url("./../../Styles/Images/home.jpg");
-=======
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 51, 133, 0.75)), to(rgba(30, 29, 64, 0.75))), url("./../../Styles/Images/home.jpg");
-  background-image: linear-gradient(rgba(54, 51, 133, 0.75), rgba(30, 29, 64, 0.75)), url("./../../Styles/Images/home.jpg");
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   background-position: top;
   background-size: 100%;
 }
@@ -243,13 +203,8 @@
 }
 
 .nav__search {
-<<<<<<< HEAD
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 7, 38, 0.7)), to(rgba(7, 116, 140, 0.68))), url("./../../Styles/Images/search.jpg");
   background-image: linear-gradient(rgba(2, 7, 38, 0.7), rgba(7, 116, 140, 0.68)), url("./../../Styles/Images/search.jpg");
-=======
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 51, 133, 0.75)), to(rgba(30, 29, 64, 0.75))), url("./../../Styles/Images/search.jpg");
-  background-image: linear-gradient(rgba(54, 51, 133, 0.75), rgba(30, 29, 64, 0.75)), url("./../../Styles/Images/search.jpg");
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   background-position: top;
   background-size: 100%;
 }
@@ -261,13 +216,8 @@
 }
 
 .nav__fosters {
-<<<<<<< HEAD
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 7, 38, 0.7)), to(rgba(7, 116, 140, 0.68))), url("./../../Styles/Images/fosters.jpg");
   background-image: linear-gradient(rgba(2, 7, 38, 0.7), rgba(7, 116, 140, 0.68)), url("./../../Styles/Images/fosters.jpg");
-=======
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 51, 133, 0.75)), to(rgba(30, 29, 64, 0.75))), url("./../../Styles/Images/fosters.jpg");
-  background-image: linear-gradient(rgba(54, 51, 133, 0.75), rgba(30, 29, 64, 0.75)), url("./../../Styles/Images/fosters.jpg");
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   background-position: top;
   background-size: 100%;
 }
@@ -279,13 +229,8 @@
 }
 
 .nav__history {
-<<<<<<< HEAD
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 7, 38, 0.7)), to(rgba(7, 116, 140, 0.68))), url("./../../Styles/Images/history.jpg");
   background-image: linear-gradient(rgba(2, 7, 38, 0.7), rgba(7, 116, 140, 0.68)), url("./../../Styles/Images/history.jpg");
-=======
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 51, 133, 0.75)), to(rgba(30, 29, 64, 0.75))), url("./../../Styles/Images/history.jpg");
-  background-image: linear-gradient(rgba(54, 51, 133, 0.75), rgba(30, 29, 64, 0.75)), url("./../../Styles/Images/history.jpg");
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   background-position: top;
   background-size: 100%;
 }

@@ -10,11 +10,7 @@
           align-items: center;
   padding: 0 2rem 1rem;
   background-clip: content-box;
-<<<<<<< HEAD
   background-color: #020726;
-=======
-  background-color: #1E1D40;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   width: 100%;
 }
 
@@ -33,13 +29,10 @@
   background-color: transparent;
 }
 
-<<<<<<< HEAD
 .input__group {
   width: 100%;
 }
 
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 .container .decision__btn {
   background-color: transparent;
   padding: 1rem;
@@ -49,20 +42,12 @@
   -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
   border-radius: .5em;
-<<<<<<< HEAD
   color: #075473;
-=======
-  color: #4AB0D9;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 
 .result__container {
   padding: 0 1rem;
   background-clip: content-box;
-<<<<<<< HEAD
   background-color: #020726;
-=======
-  background-color: #1E1D40;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 /*# sourceMappingURL=Search.css.map */

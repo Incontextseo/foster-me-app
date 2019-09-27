@@ -1,5 +1,4 @@
 @mixin for-phone-only {
-<<<<<<< HEAD
   @media (max-width: 599px) { @content; }
 }
 @mixin for-tablet {
@@ -11,16 +10,3 @@
 @mixin for-desktop-up {
   @media (min-width: 1200px) { @content; }
 }
-=======
-    @media (max-width: 599px) { @content; }
-  }
-  @mixin for-tablet {
-    @media (min-width: 600px) { @content; }
-  }
-  @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
-  }
-  @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
-  }
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3

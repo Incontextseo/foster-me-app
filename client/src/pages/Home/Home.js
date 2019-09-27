@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Login from "../../components/Login/Login"
+import Main from "../../components/Main/Main"
 import API from "../../utils/API";
 
 
@@ -30,15 +31,10 @@ class Home extends React.Component {
             <h1 className="search__title">Welcome Foster Families!</h1>
             <p className="search__des">Change a life. Find an animal to foster!</p>
         </div>
-<<<<<<< HEAD
             <Main/>
             <Login 
             />
 
-=======
-            <Login 
-            />
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
       </div>
     );
   };

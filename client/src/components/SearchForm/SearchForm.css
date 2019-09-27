@@ -93,13 +93,8 @@
 }
 
 .search__btn {
-<<<<<<< HEAD
   background-color: #020726;
   color: #075473;
-=======
-  background-color: #1E1D40;
-  color: #4AB0D9;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   padding: 1rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -110,11 +105,7 @@
 }
 
 .search__header {
-<<<<<<< HEAD
   color: #020726;
-=======
-  color: #1E1D40;
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   text-align: center;
 }
 

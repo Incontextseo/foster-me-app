@@ -1,7 +1,6 @@
 @import './../../Styles//variables';
 @import './../../Styles//mediaQ';
 @import './../../Styles//functions';
-<<<<<<< HEAD
 
 
 
@@ -113,8 +112,6 @@ $tablet: 850px;
         text-decoration: none;
     }
 }
-=======
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 
 
 
@@ -238,19 +235,10 @@ $tablet: 850px;
     @media (min-width: $tablet){
         display:none;
     }
-<<<<<<< HEAD
-=======
-}
-
-.nav__home{
-    @include home();
-
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 .nav__search{
     @include search();
 
-<<<<<<< HEAD
 .nav__home{
     @include home();
 
@@ -267,14 +255,3 @@ $tablet: 850px;
     @include history();
 
 }
-=======
-}
-.nav__fosters{
-    @include fosters();
-
-}
-.nav__history{
-    @include history();
-
-}
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3

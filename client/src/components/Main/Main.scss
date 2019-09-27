@@ -1,6 +1,5 @@
 @import './../../Styles//variables';
 @import './../../Styles//mediaQ';
-<<<<<<< HEAD
 @import './../../Styles//functions';
 
 
@@ -164,78 +163,3 @@ width:100%;
 
 
 }
-=======
-
-.main__container{
-    width:100%;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-top: 2rem;
-    align-items: center;
-    flex-grow: 1;
-
-
-    .main__link{
-        margin: 16px 0;
-        width: 100%;
-        height: 200px;
-        padding: 0 16px;
-        color: #fff;
-        //background-color: $primary__color;
-        text-align: center;
-
-        &:hover{
-            //background: #fff;
-            color: $primary__color;
-
-            text-decoration: none;
-
-          
-        }
-    }
-
-    .main__home{
-        background-image:linear-gradient(
-            rgba(54, 51, 133, 0.75), 
-            rgba(30, 29, 64, 0.75)
-          ), url('./../../Styles/Images/home.jpg');
-        background-position: top;
-        background-size:100%;
-
-    }
-
-    .main__search{
-        background-image:linear-gradient(
-            rgba(54, 51, 133, 0.75), 
-            rgba(30, 29, 64, 0.75)
-          ), url('./../../Styles/Images/search.jpg');
-        background-position: top;
-        background-size:100%;
-
-
-
-    }
-
-    .main__fosters{
-        background-image:linear-gradient(
-            rgba(54, 51, 133, 0.75), 
-            rgba(30, 29, 64, 0.75)
-          ), url('./../../Styles/Images/fosters.jpg');
-        background-position: center;
-        background-size:100%;
-
-    }
-
-    .main__history{
-        background-image:linear-gradient(
-            rgba(54, 51, 133, 0.75), 
-            rgba(30, 29, 64, 0.75)
-          ), url('./../../Styles/Images/history.jpg');
-        background-position: center;
-        background-size:100%;
-
-    }
-  
-}
-
->>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
