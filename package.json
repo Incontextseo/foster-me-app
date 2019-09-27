@@ -19,7 +19,6 @@
     "read-more-react": "^1.0.9",
     "sequelize": "^5.19.0"
   },
-  "homepage": "https://github.com/Incontextseo/foster-me-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

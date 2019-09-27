@@ -34,20 +34,20 @@ class Login extends Component {
                        <h2>Login Form</h2>
                        <form className="login" />
                        <div className="form-group">
-                           <label htmlFor="exampleInputEmail1">Email address</label>
+                           <label htmlFor="exampleInputEmail1">Email address </label>
                            <input type="email" className="form-control" id="email-input" placeholder="Email" value={this.state.email}
                                name="email"
                                 onChange={this.handleInputChange}
                                />
                            </div>
                        <div className="form-group">
-                           <label htmlFor="exampleInputPassword1">Password</label>
+                           <label htmlFor="exampleInputPassword1">Password </label>
                            <input type="password" className="form-control" id="password-input" placeholder="Password" value={this.state.password}
                                name="password"
                                 onChange={this.handleInputChange}
                                />
                        </div>
-                       <button  type="submit" className="btn btn-default" onClick={this.Login} >Log In</button>
+                       <button  type="submit" className="search__btn" onClick={this.Login} >Log In</button>
                        <br />
                        {/* <Router> */}
                            <div>

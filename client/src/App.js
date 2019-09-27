@@ -10,7 +10,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from './components/Nav';
 // import Header from './components/Header';
 import Footer from './components/Footer';
-import Signup from './pages/Signup/Signup';
+import Signup from './pages/Signup';
 
 class App extends Component {
 
