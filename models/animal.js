@@ -60,6 +60,11 @@ module.exports = function(sequelize, DataTypes) {
         isUrl: true
       }
     },
+    urlSecureFullsize: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      defaultValue: ""
+    },
     fosterStatus: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -73,39 +78,184 @@ module.exports = function(sequelize, DataTypes) {
     interactWithChildren: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     interactWithPets: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: "No"
+      defaultValue: ""
     },
     interactionComments: {
       type: DataTypes.TEXT,
       allowNull: true,
       defaultValue: ""
     },
-    initialReaction: {
+    initialReaction1: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: ""
     },
-    greetingReaction: {
+    initialReaction2: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: ""
     },
-    pettingReaction: {
+    initialReaction3: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: ""
     },
-    playReaction: {
+    initialReaction4: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: ""
     },
-    holdingReaction: {
+    greetingReaction1: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction4: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction5: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction6: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    greetingReaction7: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction1: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction4: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction5: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction6: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction7: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction8: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction9: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    pettingReaction10: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction1: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction4: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    playReaction5: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction1: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction3: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction4: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction5: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction6: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction7: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ""
+    },
+    holdingReaction8: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: ""
@@ -135,6 +285,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: ""
     },
+    animalProfile: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+
     // deletedAt: DataTypes.DATE
     },  
     // {

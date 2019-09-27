@@ -1,0 +1,62 @@
+@import './variables';
+
+@mixin reset(){
+    background-image:none
+}
+
+@mixin home(){
+    background-image:linear-gradient(
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
+      ), url('./../../Styles/Images/home.jpg');
+    background-position: top;
+    background-size:100%;
+
+    @media (min-width: $tablet){
+        @include reset();
+    }
+    
+}
+
+
+@mixin search(){
+    background-image:linear-gradient(
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
+      ), url('./../../Styles/Images/search.jpg');
+    background-position: top;
+    background-size:100%;
+
+    @media (min-width: $tablet){
+        @include reset();
+    }
+
+}
+
+@mixin fosters(){
+    background-image:linear-gradient(
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
+      ), url('./../../Styles/Images/fosters.jpg');
+    background-position: top;
+    background-size:100%;
+
+    @media (min-width: $tablet){
+        @include reset();
+    }
+
+}
+
+@mixin history(){
+    background-image:linear-gradient(
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
+      ), url('./../../Styles/Images/history.jpg');
+    background-position: top;
+    background-size:100%;
+
+    @media (min-width: $tablet){
+        @include reset();
+    }
+
+}

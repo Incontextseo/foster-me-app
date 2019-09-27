@@ -5,16 +5,20 @@
   "main": "server.js",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "bcryptjs": "^2.4.3",
+    "css-loader": "^3.2.0",
     "dotenv": "^8.1.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mdbreact": "^4.19.2",
     "multer": "^1.4.2",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "read-more-react": "^1.0.9",
+    "sequelize": "^5.19.0"
   },
-  "homepage": "https://github.com/Incontextseo/foster-me-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

@@ -1,0 +1,92 @@
+@import './../../Styles//variables';
+@import './../../Styles//mediaQ';
+@import './../../Styles//functions';
+
+
+.row{
+    display: flex;
+    flex-direction: column;
+    // padding: 0 1rem;
+    // background-clip: content-box;
+    // justify-content: space-around;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: $primary__color;
+    color: $secondary__color;
+
+    h3,p{
+        margin:0;
+        
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    @include for-tablet{
+        flex-direction: row;
+       align-items: center;
+       height:100%;
+       width:100%;
+        h3{
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 1rem;
+        }
+
+    }
+}
+
+
+.img-area{
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+
+ .news-img{
+    padding: 1rem 2rem;
+     width:100%;
+     height:auto;
+
+     @include for-tablet{
+        padding: 0 0 0 1rem;
+        width:350px;
+        
+    }
+ }
+
+ @include for-tablet{
+     margin:0;
+ }
+}
+
+.animal-area{
+
+    padding: 0 2rem 2rem;
+    span{
+        font-weight: bold;
+
+      
+    }
+
+    @include for-tablet{
+        margin:1rem 0;
+   
+        // display:flex;
+        // flex-direction: column;
+        
+        height:100%;
+
+        padding: 1rem 3rem;
+    
+        
+    }
+}

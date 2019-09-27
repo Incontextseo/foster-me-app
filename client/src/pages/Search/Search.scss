@@ -1,0 +1,48 @@
+@import './../../Styles//variables';
+@import './../../Styles//mediaQ';
+@import './../../Styles//functions';
+
+
+.decisions{
+    display:flex;
+    justify-content: space-between;
+   align-items: center;
+   
+   padding: 0 2rem 1rem;
+   background-clip: content-box;
+    background-color: $primary__color;
+    width:100%;
+  
+
+    @include for-tablet{
+        justify-content: flex-start;
+        .decision__btn{
+            margin-right:2.5rem;
+        }
+    }
+}
+
+.decision__btn{
+    background-color: transparent;
+    
+}
+.input__group{
+    width:100%;
+}
+.container .decision__btn{
+    background-color:transparent;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    color: $secondary__color
+}
+
+.result__container{
+    padding: 0 1rem;
+    background-clip: content-box;
+    background-color: $primary__color;
+    //border-radius: .5em;
+}

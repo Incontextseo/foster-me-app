@@ -32,7 +32,8 @@ class ModalViewProfile extends Component {
           animalOKForSeniors: props.animalOKForSeniors,
           animalOKWithCats: props.animalOKWithCats,
           animalOKWithDogs: props.animalOKWithDogs,
-          animalDescriptionPlain: props.animalDescriptionPlain
+          animalDescriptionPlain: props.animalDescriptionPlain,
+          animalProfile: props.animalProfile
         };
         this.handleChange = this.handleChange.bind(this);
       }
@@ -53,7 +54,7 @@ render() {
   console.log('this props', this.props);
   return (
     <MDBContainer>
-      <MDBBtn data-id={this.props.animalID} onClick={this.toggle}>View Profile</MDBBtn>
+      <MDBBtn className="decision__btn" data-id={this.props.animalID} onClick={this.toggle}>View Profile</MDBBtn>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle} backdrop={false}  size="fluid" >
         <MDBModalHeader toggle={this.toggle}>View Your Foster's Profile</MDBModalHeader>
         <MDBModalBody>
@@ -78,8 +79,9 @@ render() {
               animalOKWithAdults= {this.props.animalOKWithAdults}
               animalOKForSeniors= {this.props.animalOKForSeniors}
               animalOKWithCats= {this.props.animalOKWithCats}
-              animalOKWithDogs= {this.props.animalBreedanimalOKWithDogs}
+              animalOKWithDogs= {this.props.animalOKWithDogs}
               animalDescriptionPlain= {this.props.animalDescriptionPlain}
+              animalProfile={this.props.animalProfile}
             />
         </MDBModalBody>
         <MDBModalFooter>

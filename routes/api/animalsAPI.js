@@ -1,7 +1,7 @@
 const db = require("../../models");
 const router = require("express").Router();
 const axios = require("axios");
-const Op = require("Sequelize").Op;
+const Op = require("sequelize").Op;
 const path = require("path");
 const multer = require("multer");
 const dotenv = require("dotenv");
@@ -78,6 +78,8 @@ router.route("/search")
     .post(function(req, res) {
         data.search.filters[0].criteria = req.body.animalType;
         data.search.filters[1].criteria = req.body.searchZip;
+        // data.search.filters[3].criteria = "Yes";
+        // data.search.filters[4].criteria = "Available";
         axios.post('https://api.rescuegroups.org/http/v2.json', data, {
         headers: headers
         })
@@ -111,6 +113,7 @@ router.route("/")
             animalHouseTrained: req.body.animalHouseTrained,
             animalDeclawed: req.body.animalDeclawed,
             animalThumbnailUrl: req.body.animalThumbnailUrl,
+            urlSecureFullsize: req.body.urlSecureFullsize,
             createdAt: new Date()
         })
         .then(function(dbAnimal) {
@@ -184,6 +187,16 @@ router.route("/past")
         {
             where: {
             animalID: req.body.animalID
+            }
+        })
+        .then(function(dbAnimal) {
+            res.json(dbAnimal);
+        });
+    })
+    .delete(function(req, res) {
+        db.Animal.destroy({
+            where: {
+                animalID: req.body.animalID
             }
         })
         .then(function(dbAnimal) {

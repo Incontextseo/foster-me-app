@@ -1,41 +1,37 @@
-import React from "react";
-import './Main.css';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import React, { Component } from "react";
 
-function Main(props) {
+// import Logo from './../../Styles/Images/logo-naked.png';
+// import Toggler from './../../Styles/Images/toggle-bar.png';
+import "./Main.css";
 
+class Nav extends Component {
+  state = {
+    isOpen: false
+  };
 
-    return (
+  toggleCollapse = () => {
+    console.log("Test");
+    this.setState({ isOpen: !this.state.isOpen });
+  }
 
-        <Container maxWidth="med">
-        <Grid container direction = "column"
-        justify = "center"
-        alignItems = "center">
+  render() {
+      return (
+        <div className="main__full"><h1>FOSTER ME APP </h1>
+        <div className="main__container">
 
-<Link href="/" className="link">
-        Home
-      </Link>
+        
+        <ul className="main__nav">
+          <li className="main__list__items main__home"><a href="/">Home</a></li>
+          <li className="main__list__items main__search"><a href="/search">Search</a></li>
+          <li className="main__list__items main__fosters"><a href="/fosters">My Fosters</a></li>
+          <li className="main__list__items main__history"><a href="/history">My Past Fosters</a></li>
+        </ul>
 
-<Link href="/search" className="link">
-        Find Fosters
-      </Link>
+        </div>
 
-      <Link href="/fosters" className="link">
-        My Fosters
-      </Link>
-
-      <Link href="/history" className="link">
-        My Past Fosters
-      </Link>
-
-        </Grid> 
-        </Container>
-
-
-    )
+       </div>
+      )
+  }
 }
 
-
-export default Main;
+export default Nav;
