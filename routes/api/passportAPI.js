@@ -1,6 +1,9 @@
 const db = require("../../models");
 const router = require("express").Router();
+<<<<<<< HEAD
 const passport = require("../../config/passport");
+=======
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 
 // routes match /api/animals
 router.route("/signup")
@@ -19,6 +22,7 @@ router.route("/signup")
       });
   });
 
+<<<<<<< HEAD
   router.route("/login")
   .post(function(req, res, next) {
     console.log("logging in", req.body)
@@ -32,4 +36,6 @@ router.route("/signup")
       })(req, res, next);
   });
 
+=======
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   module.exports = router;

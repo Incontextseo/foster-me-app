@@ -1,4 +1,5 @@
 .modal__container {
+<<<<<<< HEAD
   background-color: white;
 }
 
@@ -45,4 +46,8 @@
 .modal-content {
   width: 100%;
 }
+=======
+  background-color: #1E1D40;
+}
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 /*# sourceMappingURL=Modal.css.map */

@@ -5,8 +5,12 @@
         "Button.scss",
         "../../Styles/_variables.scss",
         "../../Styles/_mediaQ.scss",
+<<<<<<< HEAD
         "../../Styles/_functions.scss",
         "../../Styles/_variables.scss"
+=======
+        "../../Styles/_functions.scss"
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
     ],
     "names": [],
     "file": "Button.css"

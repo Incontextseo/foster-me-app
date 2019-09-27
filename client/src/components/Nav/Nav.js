@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 import Logo from './../../Styles/Images/logo-naked.png';
 import Toggler from './../../Styles/Images/toggle-bar.png';
 import "./Nav.css";
@@ -16,7 +20,11 @@ class Nav extends Component {
   render() {
       return (
         <div className="nav__container">
+<<<<<<< HEAD
           <img className="nav__logo" src={Logo} alt="foster me"/>
+=======
+          <img className="nav__logo" src={Logo} alt="foster me logo"/>
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
         
         <ul className={`nav ${this.state.isOpen?"open": ""}`}    >
           <li className="list__items nav__home"><a href="/">Home</a></li>
@@ -25,7 +33,11 @@ class Nav extends Component {
           <li className="list__items nav__history"><a href="/history">My Past Fosters</a></li>
         </ul>
 
+<<<<<<< HEAD
         <img src={Toggler} alt="nav toggler" onClick={this.toggleCollapse} className="nav__toggle"/>
+=======
+        <img src={Toggler} onClick={this.toggleCollapse} alt="" className="nav__toggle"/>
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
         </div>
 
 

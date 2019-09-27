@@ -4,9 +4,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const dotenv = require("dotenv");
 dotenv.config();
+<<<<<<< HEAD
 app.use(passport.initialize());
 app.use(passport.session());
 const routes = require("./routes");
+=======
+var passport = require("./config/passport");
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

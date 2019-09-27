@@ -13,8 +13,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 1rem;
+<<<<<<< HEAD
   background-color: #020726;
   color: #075473;
+=======
+  background-color: #1E1D40;
+  color: #4AB0D9;
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 }
 
 .row h3, .row p {

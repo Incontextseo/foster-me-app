@@ -10,7 +10,11 @@ import NoMatch from "./pages/NoMatch";
 import Nav from './components/Nav';
 // import Header from './components/Header';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import Signup from './pages/Signup';
+=======
+import Signup from './pages/Signup/Signup';
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
 
 class App extends Component {
 
@@ -34,6 +38,10 @@ class App extends Component {
               <Route exact path="/signup" component={Signup} />
               <Route component={NoMatch} />
             </Switch>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
             <Footer />
           </div>
         </Router>

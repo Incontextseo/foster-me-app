@@ -18,6 +18,7 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     console.log("test")
+<<<<<<< HEAD
     db.User.create({
       email: req.body.email,
       password: req.body.password
@@ -28,6 +29,18 @@ module.exports = function(app) {
       .catch(function(err) {
         res.status(401).json(err);
       });
+=======
+    // db.User.create({
+    //   email: req.body.email,
+    //   password: req.body.password
+    // })
+    //   .then(function() {
+    //     res.redirect(307, "/api/login");
+    //   })
+    //   .catch(function(err) {
+    //     res.status(401).json(err);
+    //   });
+>>>>>>> 2a36e05a44986093c20e48da8c34220d238bf9f3
   });
 
   // Route for logging user out
