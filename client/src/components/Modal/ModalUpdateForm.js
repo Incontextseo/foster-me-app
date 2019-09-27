@@ -148,7 +148,7 @@ render() {
   console.log('this props', this.props);
   return (
     <MDBContainer>
-      <MDBBtn data-id={this.props.animalID} onClick={this.toggle}>Update foster info</MDBBtn>
+      <MDBBtn className="search__btn decision__btn" data-id={this.props.animalID} onClick={this.toggle}>Update foster info</MDBBtn>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle} backdrop={false}  size="fluid" >
         <MDBModalHeader toggle={this.toggle}>Update your foster's profile</MDBModalHeader>
         <MDBModalBody>

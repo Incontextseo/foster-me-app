@@ -1,3 +1,4 @@
+@import './variables';
 
 @mixin reset(){
     background-image:none
@@ -5,8 +6,8 @@
 
 @mixin home(){
     background-image:linear-gradient(
-        rgba(54, 51, 133, 0.75), 
-        rgba(30, 29, 64, 0.75)
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
       ), url('./../../Styles/Images/home.jpg');
     background-position: top;
     background-size:100%;
@@ -20,8 +21,8 @@
 
 @mixin search(){
     background-image:linear-gradient(
-        rgba(54, 51, 133, 0.75), 
-        rgba(30, 29, 64, 0.75)
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
       ), url('./../../Styles/Images/search.jpg');
     background-position: top;
     background-size:100%;
@@ -34,8 +35,8 @@
 
 @mixin fosters(){
     background-image:linear-gradient(
-        rgba(54, 51, 133, 0.75), 
-        rgba(30, 29, 64, 0.75)
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
       ), url('./../../Styles/Images/fosters.jpg');
     background-position: top;
     background-size:100%;
@@ -48,8 +49,8 @@
 
 @mixin history(){
     background-image:linear-gradient(
-        rgba(54, 51, 133, 0.75), 
-        rgba(30, 29, 64, 0.75)
+        rgba(2, 7, 38, .7), 
+        rgba(7, 116, 140, 0.68)
       ), url('./../../Styles/Images/history.jpg');
     background-position: top;
     background-size:100%;
@@ -59,7 +60,3 @@
     }
 
 }
-
-
-
-

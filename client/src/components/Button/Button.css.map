@@ -5,7 +5,8 @@
         "Button.scss",
         "../../Styles/_variables.scss",
         "../../Styles/_mediaQ.scss",
-        "../../Styles/_functions.scss"
+        "../../Styles/_functions.scss",
+        "../../Styles/_variables.scss"
     ],
     "names": [],
     "file": "Button.css"

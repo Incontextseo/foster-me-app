@@ -1,6 +1,6 @@
 import React from "react";
 import './AnimalResult.css';
-import Pawprint from "./pawprint.png";
+import Pawprint from "./pawprint-lightblue.svg";
 
 
 function AnimalResult(props) {

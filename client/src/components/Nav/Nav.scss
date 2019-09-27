@@ -17,6 +17,117 @@ $tablet: 850px;
 .nav__container{
     display:flex;
     position: relative;
+    background-color:$primary__color;
+    -webkit-box-shadow: 0 10px 6px -6px #0d0d0d;
+       -moz-box-shadow: 0 10px 6px -6px #0d0d0d;
+            box-shadow: 0 10px 6px -6px #0d0d0d;
+   
+    height: 100px;
+    align-items: center;
+
+}
+
+.nav{
+    //styling
+    text-transform: uppercase;
+    font-weight: 800;
+    list-style:none;
+   background: rgba(2, 7, 38, .9);
+
+    //margins
+    display: flex;
+    // flex-direction: column;
+    flex-wrap:wrap;
+    
+    width: 100%;
+    height:100vh;
+    text-align: center;
+    position: fixed;
+    // overflow-y:auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+   
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+   align-content: space-between;
+  padding: 15vh 0;
+
+    /**Display Toggler */
+    display:none;
+    transform:translateY(100vh);
+
+    &.open{
+        display:flex;
+        animation: slideUp 1s ease;
+        transform:translateY(0);
+        overflow-y: scroll;
+        position: absolute;
+     
+    }
+
+    &.close{
+        animation: slideDown 1s ease;
+       // transform:translateY(100vh);
+        
+    }
+
+    @media (min-width: $tablet){
+        display:flex;
+        flex-direction: row;
+        background-color: transparent;
+        position: static;
+        height: auto;
+        justify-content: flex-start;
+        align-items:center;
+        transform:none;
+
+    }
+
+    
+}
+
+.list__items{
+    margin: .5rem;
+    width: 300px;
+    height: 120px;
+    padding: 0 16px;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    @media (min-width: $tablet){
+        margin: 0 1rem;
+       
+        height: auto;
+        width:auto;
+    }
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+
+$tablet: 850px;
+@keyframes slideUp{
+    0%{transform:translateY(100vh)}
+    100%{transform:translateY(0)}
+}
+
+@keyframes slideDown{
+    0%{transform:translateY(0)}
+    100%{transform:translateY(100vh)}
+}
+.nav__container{
+    display:flex;
+    position: relative;
     background-color:#f1f1f1;
     -webkit-box-shadow: 0 10px 6px -6px #222;
        -moz-box-shadow: 0 10px 6px -6px #222;
@@ -125,6 +236,8 @@ $tablet: 850px;
         display:none;
     }
 }
+.nav__search{
+    @include search();
 
 .nav__home{
     @include home();

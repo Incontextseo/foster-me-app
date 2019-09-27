@@ -10,7 +10,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from './components/Nav';
 // import Header from './components/Header';
 import Footer from './components/Footer';
-import Signup from './pages/Signup/Signup';
+import Signup from './pages/Signup';
 
 class App extends Component {
 
@@ -34,7 +34,6 @@ class App extends Component {
               <Route exact path="/signup" component={Signup} />
               <Route component={NoMatch} />
             </Switch>
-
             <Footer />
           </div>
         </Router>
