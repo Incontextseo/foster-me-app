@@ -93,8 +93,8 @@
 }
 
 .search__btn {
-  background-color: #1E1D40;
-  color: #4AB0D9;
+  background-color: #020726;
+  color: #075473;
   padding: 1rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -105,7 +105,7 @@
 }
 
 .search__header {
-  color: #1E1D40;
+  color: #020726;
   text-align: center;
 }
 
@@ -126,4 +126,3 @@
     font-size: 22px;
   }
 }
-/*# sourceMappingURL=SearchForm.css.map */

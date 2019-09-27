@@ -12,6 +12,7 @@
    background-clip: content-box;
     background-color: $primary__color;
     width:100%;
+  
 
     @include for-tablet{
         justify-content: flex-start;
@@ -25,7 +26,9 @@
     background-color: transparent;
     
 }
-
+.input__group{
+    width:100%;
+}
 .container .decision__btn{
     background-color:transparent;
     padding: 1rem;

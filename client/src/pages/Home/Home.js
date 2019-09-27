@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Login from "../../components/Login/Login"
 import API from "../../utils/API";
+import Main from "../../components/Main";
 
 
 class Home extends React.Component {
@@ -32,6 +33,7 @@ class Home extends React.Component {
         </div>
             <Login 
             />
+            <Main/>
       </div>
     );
   };

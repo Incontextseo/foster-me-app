@@ -3,9 +3,45 @@
 @import "./../../Styles/mediaQ";
 
 .modal__container{
-    background-color: $primary__color;
-<<<<<<< HEAD
+    background-color: white;
+
+
 }
-=======
+
+.modal{
+    background-color: $tertiary__color;
+    color: $quant__color;
+    width:50vw;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
->>>>>>> 7c4ecf4b8ceafd03037bb0d9c81ad40da89c1f1b
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.close{
+    span{
+        width:50px;
+    }
+
+}
+
+.btn-secondary{
+    background:$quant__color;
+    color: $tertiary__color;
+    border: none;
+    padding: 10px 50px;
+  
+    width: 100%;
+    text-align: center;
+
+}
+
+.modal-content{
+    width:100%;
+}
