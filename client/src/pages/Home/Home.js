@@ -31,9 +31,10 @@ class Home extends React.Component {
             <h1 className="search__title">Welcome Foster Families!</h1>
             <p className="search__des">Change a life. Find an animal to foster!</p>
         </div>
+            <Main/>
             <Login 
             />
-            <Main/>
+
       </div>
     );
   };
