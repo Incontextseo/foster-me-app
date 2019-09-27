@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,iBAAiB,CAAA;EACb,gBAAgB,ECDF,OAAO;CDExB",
+    "sources": [
+        "ViewProfile.scss",
+        "../../Styles/_variables.scss",
+        "../../Styles/_functions.scss",
+        "../../Styles/_mediaQ.scss"
+    ],
+    "names": [],
+    "file": "ViewProfile.css"
+}

@@ -4,6 +4,7 @@ import AnimalResult from "../../components/AnimalResult";
 import Button from "../../components/Button";
 import API from "../../utils/API";
 import ModalViewProfile from "../../components/Modal/ModalViewProfile";
+import "./Search.css"
 
 class Search extends React.Component {
   state = {
@@ -71,8 +72,9 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <div className="col-12 text-center">
-            <h1>SEARCH AVAILABLE ANIMALS</h1>
+        <div className="search__header">
+            <h1 className="search__title">Available Fosters</h1>
+            <p className="search__des">Change a life. Find an animal to foster!</p>
         </div>
         <SearchForm
           handleInputChange={this.handleInputChange}
@@ -91,34 +93,38 @@ class Search extends React.Component {
             urlSecureFullsize = animal.value.animalThumbnailUrl;
            } 
           return (
-            <div className="container" key={animal.value.animalID}>
+            <div className="result__container" key={animal.value.animalID}>
                 <AnimalResult 
                   animalID={animal.value.animalID}
                   animalName={animal.value.animalName}
                   animalGeneralAge={animal.value.animalGeneralAge}
                   animalGeneralSizePotential={animal.value.animalGeneralSizePotential}
                   animalDescriptionPlain={animal.value.animalDescriptionPlain}
-                  animalThumbnailUrl={animal.value.animalThumbnailUrl}
                   animalBreed={animal.value.animalBreed}
                   urlSecureFullsize={urlSecureFullsize}
                 />
+
+                <div className="decisions">
                 <Button 
                   onClick={() => this.saveAnimal(animal.value.animalID)}
                   buttonText="Foster me"
                   animalID={animal.value.animalID}
                 />​
                 <ModalViewProfile
-                  animalID={animal.value.animalID}
-                  animalName={animal.value.animalName}
-                  animalGeneralAge={animal.value.animalGeneralAge}
-                  animalGeneralSizePotential={animal.animalGeneralSizePotential}
-                  animalSpecies={animal.animalSpecies}
-                  animalSex={animal.value.animalSex}
-                  animalBreed={animal.value.animalBreed}
-                  animalDescriptionPlain={animal.value.animalDescriptionPlain}
-                  animalHouseTrained={animal.animalHouseTrained}
-                  animalDeclawed={animal.animalDeclawed}
+                  animalID={animal.animalID}
+                  animalName={animal.animalName}
+                  animalGeneralAge={animal.animalGeneralAge}
+                  fosterReason={animal.fosterReason}
+                  animalSex={animal.animalSex}
+                  animalBreed={animal.animalBreed}
+                  animalDescriptionPlain={animal.animalDescriptionPlain}
+                  animalHouseTrained= {animal.animalHouseTrained}
+                  interactWithChildren= {animal.interactWithChildren}
+                  interactWithPets= {animal.interactWithPets}
+                  interactionComments={animal.interactionComments}
+                  animalProfile={animal.animalProfile}
                 />
+                </div>
             </div>
   
           )

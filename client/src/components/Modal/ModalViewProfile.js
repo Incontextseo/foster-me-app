@@ -49,45 +49,12 @@ handleChange = event => {
     this.setState({[event.target.name]: event.target.value});
   };
 
-// handleSubmit = event => {
-//     event.preventDefault();
-
-//     API.updateAnimal({
-//       animalID: this.state.animalID,
-//       fosterReason: this.state.fosterReason,
-//       animalHouseTrained: this.state.animalHouseTrained,
-//       interactWithChildren: this.state.interactWithChildren,
-//       interactWithPets: this.state.interactWithPets,
-//       interactionComments: this.state.interactionComments,
-//       initialReaction: this.state.initialReaction, 
-//       greetingReaction: this.state.greetingReaction,
-//       pettingReaction: this.state.pettingReaction,
-//       playReaction: this.state.playReaction,
-//       holdingReaction: this.state.holdingReaction,
-//       animalOKWithKids: this.state.animalOKWithKids,
-//       animalOKWithAdults: this.state.animalOKWithAdults,
-//       animalOKForSeniors: this.state.animalOKForSeniors,
-//       animalOKWithCats: this.state.animalOKWithCats,
-//       animalOKWithDogs: this.state.animalOKWithDogs,
-//       animalDescriptionPlain: this.state.animalDescriptionPlain,
-//     })
-//     .then(
-//         API.getCurrentFosters()
-//         .then(res => {
-//             console.log("res.data from getCurrentFosters method: ", res.data)
-//             this.setState({animals: res.data})
-//           })
-//           .catch(err => console.log(err))
-//         )
-//     .catch(err => console.log(err))
-    
-// }
 
 render() {
   console.log('this props', this.props);
   return (
     <MDBContainer>
-      <MDBBtn data-id={this.props.animalID} onClick={this.toggle}>View Profile</MDBBtn>
+      <MDBBtn className="decision__btn" data-id={this.props.animalID} onClick={this.toggle}>View Profile</MDBBtn>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle} backdrop={false}  size="fluid" >
         <MDBModalHeader toggle={this.toggle}>View Your Foster's Profile</MDBModalHeader>
         <MDBModalBody>
