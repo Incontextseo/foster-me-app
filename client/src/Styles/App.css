@@ -40,4 +40,8 @@ body {
 h1 {
   text-align: center;
 }
+
+a:visited {
+  color: #075473;
+}
 /*# sourceMappingURL=App.css.map */
