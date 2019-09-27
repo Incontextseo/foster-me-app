@@ -5,6 +5,8 @@ import './Modal.css';
 import ViewProfile from "../ViewProfile";
 // import API from '../../utils/API';
 
+
+
 class ModalViewProfile extends Component {
     constructor (props) {
         super(props);
@@ -37,6 +39,8 @@ class ModalViewProfile extends Component {
         this.handleChange = this.handleChange.bind(this);
       }
 
+      
+
 toggle = () => {
   this.setState({
     modal: !this.state.modal
@@ -54,7 +58,7 @@ render() {
   return (
     <MDBContainer>
       <MDBBtn className="decision__btn" data-id={this.props.animalID} onClick={this.toggle}>View Profile</MDBBtn>
-      <MDBModal isOpen={this.state.modal} toggle={this.toggle} backdrop={false}  size="fluid" >
+      <MDBModal isOpen={this.state.modal} toggle={this.toggle} backdrop={false} fullHeight position="bottom">
         <MDBModalHeader toggle={this.toggle}>View Your Foster's Profile</MDBModalHeader>
         <MDBModalBody>
             <ViewProfile

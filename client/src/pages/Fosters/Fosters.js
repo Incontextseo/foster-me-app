@@ -52,11 +52,14 @@ class Fosters extends React.Component {
               animalDescriptionPlain={animal.animalDescriptionPlain}
               animalThumbnailUrl={animal.animalThumbnailUrl}
             />
+
+<div className="decisions">
             <Button 
               onClick={() => this.returnAnimal(animal.animalID)}
               buttonText="Return"
               animalID={animal.animalID}
             />
+
             <ModalUpdateForm
               animalID={animal.animalID}
               animalName={animal.animalName}
@@ -66,7 +69,7 @@ class Fosters extends React.Component {
               animalDescriptionPlain={animal.animalDescriptionPlain}
             />
           </div>
-
+</div>
         ))}
       </div>
     )

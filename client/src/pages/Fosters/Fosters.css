@@ -1,15 +1,27 @@
-/* .svg-inline--fa {
-    font-size: 100px;
+.decisions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem 1rem;
+  background-clip: content-box;
+  background-color: #020726;
+  width: 100%;
 }
 
-.shake {
-    animation: shake 0.15s; 
-    animation-iteration-count: 2; 
+@media (min-width: 600px) {
+  .decisions {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .decisions .decision__btn {
+    margin-right: 2.5rem;
+  }
 }
-
-@keyframes shake {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(4px, 0px); }
-    100% { transform: translate(-4px, 0px); }
-} */
-
+/*# sourceMappingURL=Fosters.css.map */
