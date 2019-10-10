@@ -9,11 +9,17 @@ Foster Me is a foster animal tracker that allows users to sign up for a foster, 
 * Get foster pets adopted faster
 * Increase satisfaction for foster participants
 
+## Getting started
+This full-stack React app has two package.json files, one in the root directory and one in the client folder. To start a development server, clone the repo and then run npm install from both the root and client. Then create the MySQL database by running the schema.mssql file in MySQL workbench. Run npm start to start the development server.
+
+### Prerequisites
+Sign up for an API key with RescueGroups.org at https://rescuegroups.org/services/request-an-api-key/. Save your key in a .env file in the root directory with REACT_APP_APIKEY=[your key].
+
 ## Technologies used
 * React
 * Express
 * Node JS
-* MySql
+* MySQL
 * Sequelize
 * API - Rescue Groups API
 * Passport.js
